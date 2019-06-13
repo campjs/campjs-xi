@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer>
-            Coming 2019
+            Organised by Tech Etcetera (a Non-Profit Tech Event)
           </footer>
         </div>
       </>
