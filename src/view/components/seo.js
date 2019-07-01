@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,19 +21,28 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
+        file(relativePath: { eq: "campjsx-social-image.png" }) {
+          publicURL
+          childImageSharp {
+            original {
+              width
+              height
+            }
+          }
+        }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+  const fullTitle = `${site.siteMetadata.title}${!title ? '' : ` - ${title}`}`;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={fullTitle}
       meta={[
         {
           name: `description`,
@@ -41,7 +50,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: fullTitle,
         },
         {
           property: `og:description`,
@@ -50,6 +59,18 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: 'og:image',
+          content: file.publicURL,
+        },
+        {
+          property: 'og:image:width',
+          content: file.childImageSharp.original.width,
+        },
+        {
+          property: 'og:image:height',
+          content: file.childImageSharp.original.height,
         },
         {
           name: `twitter:card`,
@@ -61,7 +82,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: fullTitle,
         },
         {
           name: `twitter:description`,
@@ -69,20 +90,20 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
+  title: PropTypes.string,
+};
 
-export default SEO
+export default SEO;
