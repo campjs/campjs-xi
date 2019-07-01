@@ -130,7 +130,7 @@ const TeaserContent = () => (
           </Link>
         </Box>
         <form
-          action="https://campjs.us17.list-manage.com/subscribe/post?u=9e86f175da4d21a075d7c3e68&amp;id=a9c3fbaa3c"
+          action="https://campjs.us17.list-manage.com/subscribe/post?u=9e86f175da4d21a075d7c3e68&amp;id=f5b9c96d69"
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
@@ -165,7 +165,7 @@ const TeaserContent = () => (
             >
               <input
                 type="text"
-                name="b_9e86f175da4d21a075d7c3e68_a9c3fbaa3c"
+                name="b_9e86f175da4d21a075d7c3e68_f5b9c96d69"
                 tabindex="-1"
               />
             </div>
