@@ -1,6 +1,4 @@
 import React from 'react';
-import { css } from '@emotion/core';
-import { useSpring, animated } from 'react-spring';
 
 const Background = () => (
   <div
@@ -15,7 +13,7 @@ const Background = () => (
     }}
   >
     {/* BG MOUNTAINS */}
-    <animated.svg
+    <svg
       viewBox="0 0 1303 1480"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +45,10 @@ const Background = () => (
           <stop offset="1" stopColor="#28242F" />
         </radialGradient>
       </defs>
-    </animated.svg>
+    </svg>
 
     {/* BG MOON */}
-    <animated.svg
+    <svg
       viewBox="0 0 294 295"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -80,10 +78,10 @@ const Background = () => (
           <stop offset="1" stopColor="#FBC0DC" />
         </linearGradient>
       </defs>
-    </animated.svg>
+    </svg>
 
     {/* BG RISES */}
-    <animated.svg
+    <svg
       viewBox="0 0 1303 1480"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -219,10 +217,10 @@ const Background = () => (
           <stop offset="1" stopColor="#BB5C8D" stopOpacity="0" />
         </radialGradient>
       </defs>
-    </animated.svg>
+    </svg>
 
     {/* BG TENT */}
-    <animated.svg
+    <svg
       viewBox="0 0 200 231"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -412,7 +410,7 @@ const Background = () => (
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
-    </animated.svg>
+    </svg>
   </div>
 );
 
