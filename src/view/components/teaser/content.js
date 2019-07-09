@@ -72,7 +72,7 @@ const TeaserContent = () => (
           color="white"
           fontSize={3}
         >
-          31 Aug - 2 Sep
+          30 Aug - 2 Sep
         </Text>
 
         <Text
