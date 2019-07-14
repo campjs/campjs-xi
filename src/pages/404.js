@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SatelliteLayout from 'view/layout/satellite';
-import SEO from 'view/components/seo';
+import SatelliteLayout from 'layout/satellite';
+import SEO from 'component/seo';
 
 const NotFoundPage = () => (
   <SatelliteLayout>

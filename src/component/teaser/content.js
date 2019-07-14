@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { Box, Flex, Button, Text, Link as RebassLink } from '@rebass/emotion';
 import { fontSize, fontFamily, padding, margin, flex } from 'styled-system';
 import themeGet from '@styled-system/theme-get';
-import Title from '../title';
+import LogoText from '../logo-text';
 import Background from './background';
 
 const Link = styled(RebassLink)`
@@ -20,12 +20,12 @@ const Input = styled.input`
   border: none;
   background: hsla(226, 31%, 71%, 0.4);
   color: white;
-  padding: ${themeGet('spacing.0')};
+  padding: ${themeGet('spacing.100')};
   margin: 0;
   border-top: solid 2px transparent;
   border-bottom: solid 2px white;
   font-family: ${themeGet('fonts.sans')};
-  font-size: ${themeGet('fontSizes.3')};
+  font-size: ${themeGet('fontSizes.400')};
   &::placeholder {
     color: hsla(0, 0%, 100%, 0.6);
   }
@@ -37,7 +37,7 @@ const Input = styled.input`
 const TeaserContent = () => (
   <Flex
     flexDirection={['column', 'colmn', 'row']}
-    padding={[4, 4, 5]}
+    padding={['500', '500', '600']}
     css={css`
       position: relative;
       min-height: 100vh;
@@ -50,37 +50,37 @@ const TeaserContent = () => (
       flex={['initial', 'initial', '1 0 auto']}
       flexDirection="column"
       minWidth={508}
-      mb={[5, null, null]}
+      mb={['600', null]}
       css={css`
         position: relative;
       `}
     >
       <Box>
-        <Title />
+        <LogoText />
       </Box>
 
       <Flex
         flexDirection="column"
         alignItems="flex-start"
-        mb={[5, 5, 6]}
+        mb={['600', '600', '700']}
         order={-1}
       >
         <Text
-          mb={1}
+          mb="200"
           fontFamily="mono"
           fontWeight={400}
           color="white"
-          fontSize={3}
+          fontSize="400"
         >
           30 Aug - 2 Sep
         </Text>
 
         <Text
-          mb={4}
+          mb="500"
           fontFamily="mono"
           fontWeight={400}
           color="white"
-          fontSize={3}
+          fontSize="400"
         >
           Broken Bay, NSW
         </Text>
@@ -88,17 +88,16 @@ const TeaserContent = () => (
         <Button
           as="a"
           title="Visit the ticket page for CampJS X"
-          // TITO LINK HERE
           href="https://ti.to/campjs/campjs-x"
           variant="primary"
           color="white"
           bg="transparent"
           borderColor="white"
           borderWidth="2px"
-          px={[3, 4, 4]}
-          py={[2, 2, 2]}
+          px={['400', '500']}
+          py={['300', '300', '300']}
         >
-          <Text fontFamily="mono" fontWeight="700" fontSize={3}>
+          <Text fontFamily="mono" fontWeight="700" fontSize="400">
             Buy your ticket >
           </Text>
         </Button>
@@ -119,11 +118,11 @@ const TeaserContent = () => (
         justifyContent="flex-start"
         alignItems="flex-start"
       >
-        <Box mb={4}>
+        <Box mb="500">
           <Link
             title="Google Form: CampJS X Call For Papers"
             fontFamily="mono"
-            fontSize={3}
+            fontSize="400"
             href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
           >
             Submit a talk or workshop >
@@ -141,7 +140,7 @@ const TeaserContent = () => (
             alignItems={['flex-start']}
             justifyContent="flex-start"
             flexWrap={['wrap', 'nowrap', 'nowrap']}
-            mb={4}
+            mb="500"
           >
             <Input
               type="email"
@@ -150,9 +149,9 @@ const TeaserContent = () => (
               placeholder="campjsfan@email.com"
               title="Your email for the CampJS X mailing list"
               required
-              fontSize={3}
-              px={[3, 4, 4]}
-              py={[2, 2, 2]}
+              fontSize="400"
+              px={['400', '500', '500']}
+              py={'300'}
               flex={['1', 0, 0]}
             />
             {/* form bot protection */}
@@ -176,8 +175,8 @@ const TeaserContent = () => (
               bg="transparent"
               borderColor="white"
               borderWidth="2px"
-              px={[3, 4, 4]}
-              py={[2, 2, 2]}
+              px={['400', '500', '500']}
+              py="300"
               type="submit"
               value="Subscribe"
               name="subscribe"
@@ -188,7 +187,7 @@ const TeaserContent = () => (
               title="Join the CampJS X mailing list"
               flex={['1', 0, 0]}
             >
-              <Text fontFamily="mono" fontWeight="700" fontSize={3}>
+              <Text fontFamily="mono" fontWeight="700" fontSize="400">
                 Submit
               </Text>
             </Button>
@@ -196,7 +195,7 @@ const TeaserContent = () => (
         </form>
       </Flex>
       <Box alignSelf="flex-end">
-        <Text fontFamily="sans" fontWeight={400} color="white" fontSize={2}>
+        <Text fontFamily="sans" fontWeight={400} color="white" fontSize="300">
           <Link href="https://ix.campjs.org/code-of-conduct/" fontFamily="sans">
             Code of Conduct
           </Link>{' '}

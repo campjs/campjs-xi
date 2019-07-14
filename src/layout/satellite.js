@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import GlobalStyles from 'view/components/global-styles';
+import { Stylings } from 'component/providers';
 
 const SatelliteLayout = ({ children }) => (
   <StaticQuery
@@ -14,7 +14,7 @@ const SatelliteLayout = ({ children }) => (
         }
       }
     `}
-    render={data => <GlobalStyles></GlobalStyles>}
+    render={data => <Stylings>{children}</Stylings>}
   />
 );
 

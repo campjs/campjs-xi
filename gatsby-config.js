@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-page-creator',
       options: {
-        path: `${__dirname}/src/view/pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     'gatsby-plugin-react-helmet',
@@ -76,7 +76,8 @@ module.exports = {
         alias: {
           asset: 'src/asset',
           util: 'src/util',
-          view: 'src/view',
+          component: 'src/component',
+          layout: 'src/layout',
         },
         extensions: ['js'],
       },
