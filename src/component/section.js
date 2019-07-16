@@ -36,11 +36,14 @@ for (let bpi in bps) {
 
 export const Grid = ({ children, rowGap, ...props }) => (
   <div
-    css={css`
+    css={theme => css`
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-column-gap: ${themeGet('space.500')({ theme })};
       ${rowGap && `grid-row-gap: ${themeGet(rowGap)({ theme })}`};
+      @media screen and (max-width: ${themeGet('breakpoints.0')({ theme })}) {
+        grid-column-gap: 0;
+      }
     `}
     {...props}
   >
@@ -75,8 +78,10 @@ export const Section = ({
     as="section"
     bg={isAlt ? 'yellow100' : 'white'}
     flex="1 1 100%"
-    py="700"
-    px="500"
+    pt="700"
+    pb="700"
+    pr="500"
+    pl="500"
     {...props}
   >
     {renderPreblock && renderPreblock()}

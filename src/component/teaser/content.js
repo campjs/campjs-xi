@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
+import { Link as GatsbyLink } from 'gatsby';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Box, Flex, Button, Text, Link as RebassLink } from '@rebass/emotion';
@@ -9,6 +10,13 @@ import LogoText from '../logo-text';
 import Background from './background';
 
 const Link = styled(RebassLink)`
+  color: ${themeGet('colors.white')};
+  text-decoration: underline;
+  ${fontSize};
+  ${fontFamily};
+`;
+
+const GLink = styled(GatsbyLink)`
   color: ${themeGet('colors.white')};
   text-decoration: underline;
   ${fontSize};
@@ -119,14 +127,14 @@ const TeaserContent = () => (
         alignItems="flex-start"
       >
         <Box mb="500">
-          <Link
+          <GLink
             title="Google Form: CampJS X Call For Papers"
             fontFamily="mono"
             fontSize="400"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
+            to="/call-for-papers"
           >
             Submit a talk or workshop >
-          </Link>
+          </GLink>
         </Box>
         <form
           action="https://campjs.us17.list-manage.com/subscribe/post?u=9e86f175da4d21a075d7c3e68&amp;id=f5b9c96d69"
@@ -196,9 +204,9 @@ const TeaserContent = () => (
       </Flex>
       <Box alignSelf="flex-end">
         <Text fontFamily="sans" fontWeight={400} color="white" fontSize="300">
-          <Link href="https://ix.campjs.org/code-of-conduct/" fontFamily="sans">
+          <GLink to="/code-of-conduct" fontFamily="sans">
             Code of Conduct
-          </Link>{' '}
+          </GLink>{' '}
           • Organised by Tech Etcetra (Non-Profit)
         </Text>
       </Box>

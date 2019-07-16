@@ -1,18 +1,25 @@
+/* @jsx jsx */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Heading, Text } from '@rebass/emotion';
+import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import themeGet from '@styled-system/theme-get';
-import { fontSize, fontFamily } from 'styled-system';
+import { fontSize, fontFamily, color } from 'styled-system';
 
 export const FeatureText = ({ children, ...props }) => (
   <Heading
     as="h1"
     color="black"
-    fontSize="700"
+    fontSize={['600', '700']}
     fontFamily="mono"
     fontWeight="400"
     mb="400"
+    css={css`
+      word-break: break-word;
+      hyphens: auto;
+    `}
+    {...props}
   >
     {children}
   </Heading>
@@ -22,7 +29,7 @@ export const HeadingText = ({ children, ...props }) => (
   <Heading
     as="h2"
     color="black"
-    fontSize="4"
+    fontSize="400"
     fontFamily="sans"
     fontWeight="700"
     mb="500"
@@ -39,6 +46,7 @@ export const SubHeadingText = ({ children, ...props }) => (
     fontSize="400"
     fontFamily="sans"
     fontWeight="400"
+    mb="500"
     {...props}
   >
     {children}
@@ -51,7 +59,7 @@ export const BodyText = ({ children, ...props }) => (
     color="black"
     fontSize="300"
     fontWeight="400"
-    lineHeight="1.4"
+    lineHeight="1.6"
     fontFamily="sans"
     mt="0"
     mb="400"
@@ -78,13 +86,14 @@ export const MetaText = ({ children, ...props }) => (
 
 export const NavItemText = ({ children, ...props }) => (
   <Text
-    as="p"
+    as="span"
     color="black"
     fontSize="300"
     fontWeight="400"
     fontFamily="sans"
     letterSpacing="1px"
-    style={{ textTransform: 'capitalize' }}
+    textDecoration="none"
+    style={{ textTransform: 'uppercase', textDecoration: 'none' }}
     {...props}
   >
     {children}
@@ -97,6 +106,7 @@ const OL = styled.ol`
   margin: 0;
   padding-left: 1rem;
   list-style: none;
+  ${color}
 `;
 
 const LI = styled.li`
@@ -112,19 +122,24 @@ const LI = styled.li`
     content: counter(level1) ' ';
     left: -0.9rem;
   }
+  ${color}
 `;
 
-export const OrderList = ({ children, ...props }) => (
+export const OrderList = ({ children, counterColor, color, ...props }) => (
   <OL {...props}>
     {children.map((child, i) => (
-      <LI key={i + child}>
-        <BodyText as="span">{child}</BodyText>
+      <LI color={counterColor || color || 'currentColor'} key={i + child}>
+        <BodyText as="span" color={color}>
+          {child}
+        </BodyText>
       </LI>
     ))}
   </OL>
 );
 OrderList.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.string).isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  ).isRequired,
 };
 
 const UL = styled.ul`
@@ -133,6 +148,7 @@ const UL = styled.ul`
   margin: 0;
   padding-left: 1rem;
   list-style: none;
+  ${color}
 `;
 
 const ULI = styled.li`
@@ -144,13 +160,16 @@ const ULI = styled.li`
     position: absolute;
     left: -0.9rem;
   }
+  ${color}
 `;
 
-export const UnorderList = ({ children, ...props }) => (
+export const UnorderList = ({ children, color, counterColor, ...props }) => (
   <UL {...props}>
     {children.map((child, i) => (
-      <ULI key={i + child}>
-        <BodyText as="span">{child}</BodyText>
+      <ULI color={counterColor || color || 'currentColor'} key={i + child}>
+        <BodyText as="span" color={color}>
+          {child}
+        </BodyText>
       </ULI>
     ))}
   </UL>

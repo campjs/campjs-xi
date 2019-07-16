@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogoTent = ({ hasText = false, textColor = 'black' }) => {
+const LogoTent = ({ hasText = false, textColor = 'black', ...props }) => {
   return (
     <svg
       viewBox={`0 0 ${hasText ? 594 : 239} 199`}
@@ -9,6 +9,7 @@ const LogoTent = ({ hasText = false, textColor = 'black' }) => {
       style={{
         maxWidth: hasText ? 594 : 239,
       }}
+      {...props}
     >
       <path d="M67.2368 0L59.2363 1.92271V15.8431H67.2368V0Z" fill="#838383" />
       <path

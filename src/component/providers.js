@@ -22,10 +22,10 @@ export const GlobalStyles = ({ children }) => (
       styles={theme => css`
         html,
         body {
-          text-rendering: geometricPrecision;
-          -webkit-font-smoothing: antialiased;
           font-size: 16px;
           font-family: ${themeGet('fonts.sans')({ theme })};
+          scroll-behavior: smooth;
+          box-sizing: border-box;
         }
       `}
     />
@@ -41,6 +41,13 @@ export const SiteStyles = ({ children }) => (
         html,
         body {
           background: ${themeGet('colors.pink200')({ theme })};
+        }
+        a {
+          text-decoration: none;
+          color: currentColor;
+        }
+        a.anchor {
+          text-decoration: underline;
         }
       `}
     />

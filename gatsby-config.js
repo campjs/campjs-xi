@@ -4,6 +4,7 @@ module.exports = {
     description:
       'CampJS is a 3-night code retreat in Broken Bay NSW Australia.',
     author: '@campjs',
+    siteUrl: 'https://x.campjs.org',
   },
   plugins: [
     {
@@ -18,6 +19,13 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/asset/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'downloads',
+        path: `${__dirname}/src/asset/downloads`,
       },
     },
     'gatsby-transformer-sharp',
@@ -65,7 +73,7 @@ module.exports = {
           },
           {
             family: 'DM Sans',
-            variants: ['400'],
+            variants: ['400', '700'],
           },
         ],
       },
@@ -81,6 +89,10 @@ module.exports = {
         },
         extensions: ['js'],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {},
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
