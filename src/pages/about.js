@@ -149,7 +149,7 @@ const AboutPage = () => {
           <Box
             order={[0, 0, 1, 1]}
             as="section"
-            flex="1 1 30%"
+            flex={['1 1 100%', '1 1 30%']}
             py="700"
             px="500"
           >
