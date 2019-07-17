@@ -56,6 +56,10 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-netlify',
+      options: {},
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
