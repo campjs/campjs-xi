@@ -57,7 +57,13 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-netlify',
-      options: {},
+      options: {
+        headers: {
+          '/google-fonts/*': [
+            'Cache-Control: public,max-age=31536000,immutable',
+          ],
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
