@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import React from 'react';
-import { css as createClassName } from 'emotion';
 import { css, jsx } from '@emotion/core';
-import { Box, Flex } from '@rebass/emotion';
+import { Box } from '@rebass/emotion';
 import themeGet from '@styled-system/theme-get';
 import theme from '../util/theme';
 
-const mq = (minWidth, rules) => createClassName`
+const mq = (minWidth, rules) => css`
   @media (min-width: ${minWidth}) {
     ${rules}
   }
@@ -14,23 +13,23 @@ const mq = (minWidth, rules) => createClassName`
 
 const gx = { w: {}, c: {} };
 const bps = [null].concat(theme.breakpoints);
-const autoCol = `
+const autoCol = css`
   grid-column-start: auto;
 `;
 for (let bpi in bps) {
   const bp = bps[bpi];
   gx.w[bpi] = {};
-  gx.c[bpi] = { auto: bp ? mq(bp, autoCol) : createClassName(autoCol) };
+  gx.c[bpi] = { auto: bp ? mq(bp, autoCol) : css(autoCol) };
 
   for (let step = 1; step <= 12; step++) {
-    const wStep = `
+    const wStep = css`
       grid-column-end: span ${step};
     `;
-    const cStep = `
+    const cStep = css`
       grid-column-start: ${step};
     `;
-    gx.w[bpi][step] = bp ? mq(bp, wStep) : createClassName(wStep);
-    gx.c[bpi][step] = bp ? mq(bp, cStep) : createClassName(cStep);
+    gx.w[bpi][step] = bp ? mq(bp, wStep) : css(wStep);
+    gx.c[bpi][step] = bp ? mq(bp, cStep) : css(cStep);
   }
 }
 
@@ -52,16 +51,16 @@ export const Grid = ({ children, rowGap, ...props }) => (
 );
 
 export const Block = ({ w = 1, c = 'auto', children, ...props }) => {
-  const classes = [];
+  const styles = [];
   [].concat(w).forEach((width, bp) => {
-    if (gx.w[bp] && gx.w[bp][width]) classes.push(gx.w[bp][width]);
+    if (gx.w[bp] && gx.w[bp][width]) styles.push(gx.w[bp][width]);
   });
   [].concat(c).forEach((column, bp) => {
     column = column == null ? 'auto' : column;
-    if (gx.w[bp] && gx.c[bp][column]) classes.push(gx.c[bp][column]);
+    if (gx.w[bp] && gx.c[bp][column]) styles.push(gx.c[bp][column]);
   });
   return (
-    <Box className={classes.join(' ')} {...props}>
+    <Box css={css(styles)} {...props}>
       {children}
     </Box>
   );
