@@ -40,7 +40,7 @@ export const SiteStyles = ({ children }) => (
       styles={theme => css`
         html,
         body {
-          background: ${themeGet('colors.pink200')({ theme })};
+          background: ${themeGet('colors.orange300')({ theme })};
         }
         a {
           text-decoration: none;
@@ -48,6 +48,19 @@ export const SiteStyles = ({ children }) => (
         }
         a.anchor {
           text-decoration: underline;
+        }
+        body > div > div > section {
+          position: relative;
+          z-index: 1;
+        }
+        body > div > div > section:last-of-type {
+          box-shadow: 0px 14px 16px 0px hsla(0, 0%, 0%, 0.13),
+            -1px 4px 4px 0px hsla(0, 0%, 0%, 0.09);
+        }
+        body > div > div > section + footer {
+          position: sticky;
+          bottom: 0;
+          z-index: 0;
         }
       `}
     />

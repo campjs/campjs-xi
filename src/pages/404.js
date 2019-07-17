@@ -1,8 +1,8 @@
 /* @jsx jsx */
+import React from 'react';
 import { jsx, css } from '@emotion/core';
 import { Flex } from '@rebass/emotion';
 import Background from 'component/teaser/background';
-import React from 'react';
 
 import SatelliteLayout from 'layout/satellite';
 import SEO from 'component/seo';

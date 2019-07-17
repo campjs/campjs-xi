@@ -14,7 +14,7 @@ const SatelliteLayout = ({ children }) => (
         }
       }
     `}
-    render={data => <Stylings>{children}</Stylings>}
+    render={() => <Stylings>{children}</Stylings>}
   />
 );
 

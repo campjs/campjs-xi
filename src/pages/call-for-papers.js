@@ -1,8 +1,5 @@
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from 'component/button';
+import { jsx } from '@emotion/core';
+import { PrimaryButton, SecondaryButton } from 'component/button';
 import React from 'react';
 import { Footer, Header } from 'component/navigation';
 import { Block, Section } from 'component/section';
@@ -23,25 +20,26 @@ const CallForPapersPage = () => {
       <SEO title="Call for Papers - First round closes midnight of July 22nd!" />
       <Section isGrid bg="yellow100" renderPreblock={() => <Header />}>
         <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 1]}>
-          <FeatureText color="orange400">
+          <FeatureText color="orange400" tin="up">
             Call for
             <br />
             papers
           </FeatureText>
-          <BodyText>
+          <BodyText tin="up">
             Submissions for the first CFP close on midnight of July 22nd! (you
             can still run an activity)
           </BodyText>
-          <BodyText>
+          <BodyText tin="up">
             We organise as much of CampJS in the open as possible with Github
             issues.
           </BodyText>
-          {/*<BodyText>*/}
+          {/*<BodyText tin="up">*/}
           {/*  Access Slack chat on WeAllJS using /join-private #campjs*/}
           {/*</BodyText>*/}
         </Block>
         <Block mt={[400, 400, 500, 500]} w={[8, 6, 4, 4]} c={[3, 4, 7, 5]}>
           <PrimaryButton
+            tin="up"
             width="100%"
             title="Google Form: CampJS X Call For Papers"
             href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
@@ -153,20 +151,20 @@ const CallForPapersPage = () => {
         </Block>
       </Section>
 
-      <Section isGrid bg="orange100">
-        <Block w={[12, 8, 4, 4]} c={[1, 3, 3, 3]}>
-          <FeatureText as="h4" color="pink400">
+      <Section isGrid bg="orange200">
+        <Block w={[12, 8, 5, 4]} c={[1, 3, 3, 3]}>
+          <FeatureText as="h4" color="gray100">
             Other
             <br />
             talents?
           </FeatureText>
         </Block>
         <Block w={[12, 8, 4, 4]} c={[1, 3, 8, 7]}>
-          <BodyText color="pink300">
+          <BodyText color="yellow100">
             There is always extra help to be lent on the days for random tasks
             and fun corralling.
           </BodyText>
-          <BodyText color="pink300" mb="100">
+          <BodyText color="yellow100" mb="100">
             If you want to volunteer but don’t know where to start,{' '}
             <a className="anchor" href="mailto:organisers-team@campjs.com">
               get in touch

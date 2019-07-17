@@ -117,26 +117,28 @@ const AboutPage = () => {
       <SEO title="About the Code Retreat" />
       <Section isGrid bg="yellow100" renderPreblock={() => <Header />}>
         <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 1]}>
-          <FeatureText color="orange400">About CampJS</FeatureText>
-          <BodyText>
+          <FeatureText color="orange400" tin="up">
+            About CampJS
+          </FeatureText>
+          <BodyText tin="up">
             CampJS isn’t a regular conference. It’s time and space to learn new
             things, relax and really connect. Whether you’re a Javascript
             veteran, total newbie, into art, music or hardware, there’s
             something for everyone.
           </BodyText>
-          <BodyText>
+          <BodyText tin="up">
             We schedule a unique blend of expert-led content and self-directed
             learning and encourage attendees to run other activities like
             bushwalking, drone flying or knitting.
           </BodyText>
-          <BodyText>
+          <BodyText tin="up">
             To get a vibe for the event, check out the videos from previous
             camps.
           </BodyText>
         </Block>
       </Section>
 
-      <Box id="location" bg="gray400">
+      <Box as="section" id="location" bg="gray400">
         <Flex
           flexDirection="row"
           alignItems="stretch"
@@ -335,11 +337,11 @@ const AboutPage = () => {
         </Block>
       </Section>
 
-      <Section id="volunteer" bg="orange100">
+      <Section id="volunteer" bg="orange200">
         <Grid rowGap="space.600">
           <Block w={[12, 8, 6, 6]} c={[1, 3, 1, 1]}>
-            <SubHeadingText color="pink400">Get involved</SubHeadingText>
-            <BodyText color="pink300">
+            <HeadingText color="gray100">Get involved</HeadingText>
+            <BodyText color="yellow100">
               Issue tracker: We organise as much of CampJS in the open as
               possible on{' '}
               <a
@@ -352,8 +354,8 @@ const AboutPage = () => {
             </BodyText>
           </Block>
           <Block w={[12, 8, 6, 6]} c={[1, 3, 7, 7]}>
-            <SubHeadingText color="pink400">Volunteer</SubHeadingText>
-            <BodyText color="pink300" mb="100">
+            <HeadingText color="gray100">Volunteer</HeadingText>
+            <BodyText color="yellow100" mb="100">
               We’re always looking for people to help out, if you can’ find the
               right jobs for you, just fill out this form and we’ll get in
               touch.

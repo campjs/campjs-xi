@@ -6,89 +6,115 @@ import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import themeGet from '@styled-system/theme-get';
 import { fontSize, fontFamily, color } from 'styled-system';
+import useTransitionIn from 'util/use-transition-in';
 
-export const FeatureText = ({ children, ...props }) => (
-  <Heading
-    as="h1"
-    color="black"
-    fontSize={['600', '700']}
-    fontFamily="mono"
-    fontWeight="400"
-    mb="400"
-    css={css`
-      word-break: break-word;
-      hyphens: auto;
-    `}
-    {...props}
-  >
-    {children}
-  </Heading>
-);
+export const FeatureText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Heading
+      ref={ref}
+      as="h1"
+      color="black"
+      fontSize={['600', '700']}
+      fontFamily="mono"
+      fontWeight="400"
+      mb="400"
+      css={[
+        css`
+          word-break: break-word;
+          hyphens: auto;
+        `,
+        transCss,
+      ]}
+      {...props}
+    >
+      {children}
+    </Heading>
+  );
+};
 
-export const HeadingText = ({ children, ...props }) => (
-  <Heading
-    as="h2"
-    color="black"
-    fontSize="400"
-    fontFamily="sans"
-    fontWeight="700"
-    mb="500"
-    {...props}
-  >
-    {children}
-  </Heading>
-);
+export const HeadingText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Heading
+      ref={ref}
+      as="h2"
+      color="black"
+      fontSize="400"
+      fontFamily="sans"
+      fontWeight="700"
+      mb="500"
+      css={[transCss]}
+      {...props}
+    >
+      {children}
+    </Heading>
+  );
+};
 
-export const SubHeadingText = ({ children, ...props }) => (
-  <Heading
-    as="h3"
-    color="black"
-    fontSize="400"
-    fontFamily="sans"
-    fontWeight="400"
-    mb="500"
-    {...props}
-  >
-    {children}
-  </Heading>
-);
+export const SubHeadingText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Heading
+      ref={ref}
+      as="h3"
+      color="black"
+      fontSize="400"
+      fontFamily="sans"
+      fontWeight="400"
+      lineHeight="1"
+      mb="500"
+      css={[transCss]}
+      {...props}
+    >
+      {children}
+    </Heading>
+  );
+};
 
-export const BodyText = ({ children, ...props }) => (
-  <Text
-    as="p"
-    color="black"
-    fontSize="300"
-    fontWeight="400"
-    lineHeight="1.6"
-    fontFamily="sans"
-    mt="0"
-    mb="400"
-    {...props}
-  >
-    {children}
-  </Text>
-);
+export const BodyText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Text
+      ref={ref}
+      as="p"
+      color="black"
+      fontSize="300"
+      fontWeight="400"
+      lineHeight="1.6"
+      fontFamily="sans"
+      mt="0"
+      mb="400"
+      css={[transCss]}
+      {...props}
+    >
+      {children}
+    </Text>
+  );
+};
 
-export const MetaText = ({ children, ...props }) => (
-  <Text
-    as="span"
-    color="gray300"
-    fontSize="200"
-    fontWeight="400"
-    lineHeight="1.4"
-    fontFamily="sans"
-    mb="400"
-    {...props}
-  >
-    {children}
-  </Text>
-);
+export const MetaText = ({ children, ...props }) => {
+  return (
+    <Text
+      as="span"
+      color="gray300"
+      fontSize="200"
+      fontWeight="400"
+      lineHeight="1.4"
+      fontFamily="sans"
+      mb="400"
+      {...props}
+    >
+      {children}
+    </Text>
+  );
+};
 
 export const NavItemText = ({ children, ...props }) => (
   <Text
     as="span"
     color="black"
-    fontSize="300"
+    fontSize="200"
     fontWeight="400"
     fontFamily="sans"
     letterSpacing="1px"

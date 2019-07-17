@@ -4,13 +4,13 @@ import React from 'react';
 import { jsx, css, keyframes } from '@emotion/core';
 import styled from '@emotion/styled';
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { Box, Button, Flex, Text } from '@rebass/emotion';
+import { Box, Button, Flex } from '@rebass/emotion';
 import themeGet from '@styled-system/theme-get';
 import LogoText from 'component/logo-text';
 import { PrimaryButton } from 'component/button';
 import { Block, Section } from 'component/section';
 import { NavItemText } from 'component/text';
-import { flex, padding, margin } from 'styled-system';
+import { flex, margin } from 'styled-system';
 import theme from 'util/theme';
 
 const CampShooshKF = keyframes`
@@ -194,12 +194,12 @@ const Input = styled.input`
   margin: -5px 0 0 0;
   color: ${themeGet('colors.black')};
   font-family: ${themeGet('fonts.sans')};
-  font-size: ${themeGet('fontSizes.300')};
+  font-size: ${themeGet('fontSizes.200')};
   font-weight: ${themeGet('fontWeights.400')};
   letter-spacing: 1px;
   margin-right: ${themeGet('space.300')};
   &::placeholder {
-    color: ${themeGet('colors.gray400')};
+    color: ${themeGet('colors.gray200')};
   }
   ${flex}
   ${margin}
@@ -207,16 +207,13 @@ const Input = styled.input`
 
 export const Header = ({ ...props }) => {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
-  const handleMenuClick = React.useCallback(
-    e => {
-      setMenuOpen(!isMenuOpen);
-    },
-    [isMenuOpen, setMenuOpen]
-  );
+  const handleMenuClick = React.useCallback(() => {
+    setMenuOpen(!isMenuOpen);
+  }, [isMenuOpen, setMenuOpen]);
   const bg = 'yellow100';
 
   return (
-    <Box bg={bg} width="100%" height="0%" mb={700}>
+    <Box bg={bg} width="100%" height="0%" mb={700} {...props}>
       <NavLeft>
         <Link to="/">
           <LogoText color="black" />
@@ -312,7 +309,7 @@ export const Header = ({ ...props }) => {
                 <Button
                   role="submit"
                   color="black"
-                  fontSize="300"
+                  fontSize="200"
                   fontWeight="400"
                   fontFamily="sans"
                   letterSpacing="1px"
@@ -363,7 +360,7 @@ const FooterNavBlock = ({ children, ...props }) => (
   </Block>
 );
 
-export const Footer = ({ isAlt = true }) => {
+export const Footer = () => {
   const { sponsorKitPdf } = useStaticQuery(
     graphql`
       query {
@@ -380,12 +377,9 @@ export const Footer = ({ isAlt = true }) => {
     <Section
       isGrid
       as="footer"
-      pt="500"
+      pt="600"
       pb="700"
       bg="yellow100"
-      css={css`
-        position: relative;
-      `}
       renderPreblock={() => (
         <LogoTent
           css={theme => css`

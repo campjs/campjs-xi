@@ -1,20 +1,20 @@
 /** @jsx jsx */
-import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Box, Flex, Button, Text, Link as RebassLink } from '@rebass/emotion';
+import { Box, Flex, Button, Text } from '@rebass/emotion';
 import { fontSize, fontFamily, padding, margin, flex } from 'styled-system';
 import themeGet from '@styled-system/theme-get';
+import useTransitionIn from 'util/use-transition-in';
 import LogoText from '../logo-text';
 import Background from './background';
 
-const Link = styled(RebassLink)`
-  color: ${themeGet('colors.white')};
-  text-decoration: underline;
-  ${fontSize};
-  ${fontFamily};
-`;
+// const Link = styled(RebassLink)`
+//   color: ${themeGet('colors.white')};
+//   text-decoration: underline;
+//   ${fontSize};
+//   ${fontFamily};
+// `;
 
 const GLink = styled(GatsbyLink)`
   color: ${themeGet('colors.white')};
@@ -42,84 +42,74 @@ const Input = styled.input`
   ${margin}
 `;
 
-const TeaserContent = () => (
-  <Flex
-    flexDirection={['column', 'colmn', 'row']}
-    padding={['500', '500', '600']}
-    css={css`
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-    `}
-  >
-    <Background />
-
+const Info = ({ tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
     <Flex
-      flex={['initial', 'initial', '1 0 auto']}
+      ref={ref}
       flexDirection="column"
-      minWidth={508}
-      mb={['600', null]}
-      css={css`
-        position: relative;
-      `}
+      alignItems="flex-start"
+      mb={['600', '600', '700']}
+      order={-1}
+      css={transCss}
+      {...props}
     >
-      <Box>
-        <LogoText />
-      </Box>
-
-      <Flex
-        flexDirection="column"
-        alignItems="flex-start"
-        mb={['600', '600', '700']}
-        order={-1}
+      <Text
+        mb="200"
+        fontFamily="mono"
+        fontWeight={400}
+        color="white"
+        fontSize="400"
       >
-        <Text
-          mb="200"
-          fontFamily="mono"
-          fontWeight={400}
-          color="white"
-          fontSize="400"
-        >
-          30 Aug - 2 Sep
-        </Text>
+        30 Aug - 2 Sep
+      </Text>
 
-        <Text
-          mb="500"
-          fontFamily="mono"
-          fontWeight={400}
-          color="white"
-          fontSize="400"
-        >
-          Broken Bay, NSW
-        </Text>
+      <Text
+        mb="500"
+        fontFamily="mono"
+        fontWeight={400}
+        color="white"
+        fontSize="400"
+      >
+        Broken Bay, NSW
+      </Text>
 
-        <Button
-          as="a"
-          title="Visit the ticket page for CampJS X"
-          href="https://ti.to/campjs/campjs-x"
-          variant="primary"
-          color="white"
-          bg="transparent"
-          borderColor="white"
-          borderWidth="2px"
-          px={['400', '500']}
-          py={['300', '300', '300']}
-        >
-          <Text fontFamily="mono" fontWeight="700" fontSize="400">
-            Buy your ticket >
-          </Text>
-        </Button>
-      </Flex>
+      <Button
+        as="a"
+        title="Visit the ticket page for CampJS X"
+        href="https://ti.to/campjs/campjs-x"
+        variant="primary"
+        color="white"
+        bg="transparent"
+        borderColor="white"
+        borderWidth="2px"
+        px={['400', '500']}
+        py={['300', '300', '300']}
+      >
+        <Text fontFamily="mono" fontWeight="700" fontSize="400">
+          Buy your ticket >
+        </Text>
+      </Button>
     </Flex>
+  );
+};
 
+const Interact = ({ tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
     <Flex
+      ref={ref}
       flex={1}
       flexDirection="column"
       justifyContent={['space-between', 'space-between', 'flex-end']}
       alignItems={['flex-start', 'flex-start', 'flex-end']}
-      css={css`
-        position: relative;
-      `}
+      css={[
+        css`
+          position: relative;
+        `,
+        transCss,
+      ]}
+      {...props}
     >
       <Flex
         flexDirection="column"
@@ -211,6 +201,38 @@ const TeaserContent = () => (
         </Text>
       </Box>
     </Flex>
+  );
+};
+
+const TeaserContent = () => (
+  <Flex
+    flexDirection={['column', 'colmn', 'row']}
+    padding={['500', '500', '600']}
+    css={css`
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    `}
+  >
+    <Background />
+
+    <Flex
+      flex={['initial', 'initial', '1 0 auto']}
+      flexDirection="column"
+      minWidth={508}
+      mb={['600', null]}
+      css={css`
+        position: relative;
+      `}
+    >
+      <Box>
+        <LogoText tin="up" />
+      </Box>
+
+      <Info tin="right" />
+    </Flex>
+
+    <Interact tin="left" />
   </Flex>
 );
 

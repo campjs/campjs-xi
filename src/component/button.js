@@ -2,10 +2,20 @@
 import React from 'react';
 import { css, jsx } from '@emotion/core';
 import { Button, Text } from '@rebass/emotion';
+import useTransitionIn from 'util/use-transition-in';
 
-export const PrimaryButton = ({ onClick, title, href, children, ...props }) => {
+export const PrimaryButton = ({
+  onClick,
+  title,
+  href,
+  tin,
+  children,
+  ...props
+}) => {
+  const [ref, transCss] = useTransitionIn(tin);
   return (
     <Button
+      ref={ref}
       onClick={onClick}
       as={href ? 'a' : undefined}
       title={title}
@@ -18,11 +28,14 @@ export const PrimaryButton = ({ onClick, title, href, children, ...props }) => {
       borderStyle="solid"
       px={'425'}
       py={'425'}
-      css={css`
-        box-shadow: -2px 4px 6px 0px hsla(0, 0%, 0%, 0.15);
-        word-break: break-word;
-        hyphens: auto;
-      `}
+      css={[
+        css`
+          box-shadow: -2px 4px 6px 0px hsla(0, 0%, 0%, 0.15);
+          word-break: break-word;
+          hyphens: auto;
+        `,
+        transCss,
+      ]}
       {...props}
     >
       <Text as="span" fontFamily="mono" fontWeight="400" fontSize="300">

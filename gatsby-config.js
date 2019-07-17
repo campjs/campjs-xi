@@ -45,8 +45,8 @@ module.exports = {
         name: 'CampJS X',
         short_name: 'CampJSX',
         start_url: '/',
-        background_color: '#576B56',
-        theme_color: '#3E4456',
+        background_color: '#EC685A',
+        theme_color: '#EC685A',
         display: 'minimal-ui',
         icon: 'src/asset/images/tent.svg', // This path is relative to the root of the site.
         screenshots: [

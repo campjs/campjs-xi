@@ -1,4 +1,3 @@
-import { jsx } from '@emotion/core';
 import React from 'react';
 import { Footer, Header } from 'component/navigation';
 import { Block, Section } from 'component/section';
@@ -17,7 +16,7 @@ const CodeOfConductPage = () => {
       <SEO title="Code of Conduct" />
       <Section isGrid isAlt renderPreblock={() => <Header />}>
         <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 3]}>
-          <FeatureText mb="600">
+          <FeatureText mb="600" tin="up">
             Code of
             <br />
             Conduct

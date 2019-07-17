@@ -1,26 +1,28 @@
+/* @jsx jsx */
 import React from 'react';
-import { css } from 'emotion';
-import theme from '../util/theme';
+import { css, jsx } from '@emotion/core';
+import useTransitionIn from 'util/use-transition-in';
 
-const className = css`
-  & > path[stroke-width] {
-    @media (max-width: ${theme.breakpoints[1]}) {
-      stroke-width: 2.5;
-    }
-    @media (max-width: ${theme.breakpoints[0]}) {
-      stroke-width: 3;
-    }
-  }
-`;
-
-const LogoText = ({ color = 'white' }) => {
+const LogoText = ({ color = 'white', tin }) => {
+  const [ref, transCss] = useTransitionIn(tin);
   return (
     <svg
+      ref={ref}
       style={{ maxWidth: '402px' }}
       viewBox="0 0 402 235"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      css={theme => css`
+        & > path[stroke-width] {
+          @media (max-width: ${theme.breakpoints[1]}) {
+            stroke-width: 2.5;
+          }
+          @media (max-width: ${theme.breakpoints[0]}) {
+            stroke-width: 3;
+          }
+        }
+        ${transCss}
+      `}
     >
       <title>CAMP JSx</title>
       <desc>The CampJS X Logo (TextOnly)</desc>
