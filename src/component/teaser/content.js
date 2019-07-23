@@ -76,7 +76,7 @@ const Info = ({ tin, ...props }) => {
 
       <Button
         as="a"
-        title="Visit the ticket page for CampJS X"
+        title="Purchase the ticket page for CampJS X"
         href="https://ti.to/campjs/campjs-x"
         variant="primary"
         color="white"

@@ -304,7 +304,7 @@ const AboutPage = () => {
             <a
               className="anchor"
               href="https://ti.to/campjs/campjs-x"
-              title="Visit the CampJS X ticket page to find Diversity Tickets"
+              title="Visit the CampJS X ticket page to purchase Diversity Tickets"
             >
               Tickets page
             </a>

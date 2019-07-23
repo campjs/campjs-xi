@@ -49,7 +49,7 @@ export const SiteStyles = ({ children }) => (
         a.anchor {
           text-decoration: underline;
         }
-        body > div > div > section {
+        /* body > div > div > section {
           position: relative;
           z-index: 1;
         }
@@ -61,7 +61,7 @@ export const SiteStyles = ({ children }) => (
           position: sticky;
           bottom: 0;
           z-index: 0;
-        }
+        } */
       `}
     />
     {children}

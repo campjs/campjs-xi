@@ -254,7 +254,7 @@ export const Header = ({ ...props }) => {
           {/*</NavLink>*/}
           <NavLink
             href="https://ti.to/campjs/campjs-x"
-            title="Visit the ticket page for CampJS X"
+            title="Purchase the ticket page for CampJS X"
           >
             <NavItemText>Buy Tickets</NavItemText>
           </NavLink>
@@ -380,6 +380,9 @@ export const Footer = () => {
       pt="600"
       pb="700"
       bg="yellow100"
+      css={css`
+        position: relative;
+      `}
       renderPreblock={() => (
         <LogoTent
           css={theme => css`
@@ -456,7 +459,7 @@ export const Footer = () => {
       >
         <PrimaryButton
           width="100%"
-          title="Visit the ticket page for CampJS X"
+          title="Purchase the ticket page for CampJS X"
           href="https://ti.to/campjs/campjs-x"
         >
           Buy your ticket

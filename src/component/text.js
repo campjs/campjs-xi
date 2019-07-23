@@ -1,11 +1,12 @@
 /* @jsx jsx */
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Heading, Text } from '@rebass/emotion';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import themeGet from '@styled-system/theme-get';
-import { fontSize, fontFamily, color } from 'styled-system';
+import { color } from 'styled-system';
 import useTransitionIn from 'util/use-transition-in';
 
 export const FeatureText = ({ children, tin, ...props }) => {
@@ -31,6 +32,10 @@ export const FeatureText = ({ children, tin, ...props }) => {
       {children}
     </Heading>
   );
+};
+
+export const SubFeatureText = props => {
+  return <FeatureText as="h2" fontSize="500" {...props} />;
 };
 
 export const HeadingText = ({ children, tin, ...props }) => {
@@ -63,6 +68,7 @@ export const SubHeadingText = ({ children, tin, ...props }) => {
       fontFamily="sans"
       fontWeight="400"
       lineHeight="1"
+      letterSpacing="1px"
       mb="500"
       css={[transCss]}
       {...props}
@@ -86,6 +92,53 @@ export const BodyText = ({ children, tin, ...props }) => {
       mt="0"
       mb="400"
       css={[transCss]}
+      {...props}
+    >
+      {children}
+    </Text>
+  );
+};
+
+export const SpeakerHeadingText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Text
+      ref={ref}
+      as="h4"
+      color="black"
+      fontSize="350"
+      fontWeight="700"
+      lineHeight="1"
+      fontFamily="mono"
+      mt="0"
+      mb="400"
+      css={[transCss]}
+      {...props}
+    >
+      {children}
+    </Text>
+  );
+};
+
+export const ButtonText = ({ children, tin, ...props }) => {
+  const [ref, transCss] = useTransitionIn(tin);
+  return (
+    <Text
+      ref={ref}
+      as="span"
+      color="black"
+      fontSize="300"
+      fontWeight="400"
+      lineHeight="1"
+      fontFamily="mono"
+      mt="0"
+      mb="0"
+      css={[
+        css`
+          display: block;
+        `,
+        transCss,
+      ]}
       {...props}
     >
       {children}
@@ -213,9 +266,15 @@ export const Code = styled.code`
   padding: 1px 2px 2px 2px;
 `;
 
-export const Anchor = styled.span`
-  color: currentColor;
-  text-decoration: underline;
-  ${fontSize};
-  ${fontFamily};
-`;
+export const Anchor = props => {
+  const LinkComp = props.to ? Link : 'a';
+  return (
+    <LinkComp
+      css={css`
+        color: currentColor;
+        text-decoration: underline;
+      `}
+      {...props}
+    />
+  );
+};
