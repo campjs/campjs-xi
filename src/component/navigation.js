@@ -199,7 +199,8 @@ const Input = styled.input`
   letter-spacing: 1px;
   margin-right: ${themeGet('space.300')};
   &::placeholder {
-    color: ${themeGet('colors.gray200')};
+    color: ${themeGet('colors.black')};
+    opacity: 0.3;
   }
   ${flex}
   ${margin}

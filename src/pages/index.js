@@ -33,7 +33,13 @@ const sTextShadow = css`
 const HeaderSection = props => (
   <Section isGrid bg="transparent" renderPreblock={() => <Header />} {...props}>
     <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 1]}>
-      <FeatureText tin="up" mb="500">
+      <FeatureText
+        tin="up"
+        mb="500"
+        css={css`
+          hyphens: initial;
+        `}
+      >
         Retreat to
         <br />
         code, connect
@@ -292,13 +298,27 @@ const SpeakersSection = props => (
         More about name >
       </ButtonText>
     </Block>
-    <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]}>
+    <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]} mb={['600']}>
       <SpeakerImage
         src="https://i.pravatar.cc/300?3"
         alt="Speaker #3"
         width="300px"
         height="300px"
       />
+    </Block>
+    <Block w={[12]} c={[1]} alignItems="flex-end">
+      <ButtonText
+        color="white"
+        css={[
+          css`
+            text-align: right;
+            text-decoration: underline;
+          `,
+          sTextShadow,
+        ]}
+      >
+        View more speakers >
+      </ButtonText>
     </Block>
   </Section>
 );
@@ -375,6 +395,7 @@ const IndexPage = () => {
         bg="#adb6d5"
         css={css`
           position: relative;
+          padding-bottom: 20vw;
         `}
       >
         <MidBG />
@@ -389,7 +410,7 @@ const IndexPage = () => {
           `}
         />
         <DiversitySection
-          css={css`
+          css={theme => css`
             position: relative;
           `}
         />

@@ -40,7 +40,7 @@ export const SiteStyles = ({ children }) => (
       styles={theme => css`
         html,
         body {
-          background: ${themeGet('colors.orange300')({ theme })};
+          background: ${themeGet('colors.pink300')({ theme })};
         }
         a {
           text-decoration: none;
