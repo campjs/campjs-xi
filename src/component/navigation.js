@@ -140,6 +140,7 @@ const NavRight = styled.div`
   top: ${themeGet('space.500')};
   right: ${themeGet('space.500')};
   max-width: calc(100vw - ${themeGet('space.500')});
+  z-index: 1;
 `;
 
 const VerticalMenu = styled.nav`
