@@ -1,0 +1,182 @@
+{
+  "date": "30 August",
+  "time": "5pm",
+  "location": "Brooklyn Station, NSW",
+  "title": "Meet at Brooklyn Train Station",
+  "details": "Head to local Bottle shop and get some supplies"
+},
+{
+  "date": "30 August",
+  "time": "6pm",
+  "location": "Wharf next to Brooklyn Station, NSW",
+  "title": "Ferry Departs at 6pm sharp",
+  "details": "Make sure you catch this. There is no backup ferry."
+},
+{
+  "date": "30 August",
+  "time": "7pm",
+  "location": "Dining Hall",
+  "title": "Dinner",
+  "details": ""
+},
+{
+  "date": "31 August",
+  "time": "9am",
+  "location": "Dining Hall",
+  "title": "Breakfast",
+  "details": ""
+},
+{
+  "date": "31 August",
+  "time": "10am",
+  "location": "Main Hall",
+  "title": "Strike a pose - Gesture recognition in JavaScript with Machine Learning & Arduino",
+  "details": "by Charlie Gerard"
+},
+{
+  "date": "31 August",
+  "time": "10:30am",
+  "location": "Main Hall",
+  "title": "Automating the $h1T out of everything because I am very very tired",
+  "details": "by Calvin Dass"
+},
+{
+  "date": "31 August",
+  "time": "11am",
+  "location": "",
+  "title": "Afternoon Tea",
+  "details": ""
+},
+{
+  "date": "31 August",
+  "time": "11:30am",
+  "location": "Main Hall",
+  "title": "Javascripting your way to electronicless passive wifi devices",
+  "details": "by Steven Cooper"
+},
+{
+  "date": "31 August",
+  "time": "12noon",
+  "location": "Dining Hall",
+  "title": "Lunch",
+  "details": ""
+},
+{
+  "date": "31 August",
+  "time": "1pm",
+  "location": "Main Hall",
+  "title": "Workshop - Synth and Sequencing for beginners",
+  "details": "by Julian Scharf"
+},
+{
+  "date": "31 August",
+  "time": "3pm",
+  "location": "Dining Hall",
+  "title": "Afternoon Tea",
+  "details": ""
+},
+{
+  "date": "31 August",
+  "time": "3:30pm",
+  "location": "Main Hall",
+  "title": "Fewer Bugs with Better TypeScript Types",
+  "details": "by Rob Howard"
+},
+{
+  "date": "31 August",
+  "time": "4pm",
+  "location": "Main Hall",
+  "title": "Workshop - React Patterns And Refactoring",
+  "details": "by Inga Pflaumer"
+},
+{
+  "date": "31 August",
+  "time": "6pm",
+  "location": "Dining Hall",
+  "title": "Dinner",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "9am",
+  "location": "Dining Hall",
+  "title": "Breakfast",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "10am",
+  "location": "Main Hall",
+  "title": "The nerurodiversity factor in tech",
+  "details": "by Tanya Butenko"
+},
+{
+  "date": "1 September",
+  "time": "10:30am",
+  "location": "Main Hall",
+  "title": "Refactoring React With Juniors",
+  "details": "by Inga Pflaumer"
+},
+{
+  "date": "1 September",
+  "time": "11am",
+  "location": "",
+  "title": "Break",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "11:30am",
+  "location": "Main Hall",
+  "title": "The nerurodiversity factor in tech",
+  "details": "by Julian Scharf"
+},
+{
+  "date": "1 September",
+  "time": "12noon",
+  "location": "Dining Hall",
+  "title": "Lunch",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "1pm",
+  "location": "Main Hall",
+  "title": "Workshop - Demystifying and accepting payments online",
+  "details": "by Daniel Miller"
+},
+{
+  "date": "1 September",
+  "time": "3pm",
+  "location": "Dining Hall",
+  "title": "Afternoon Tea",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "3:30pm",
+  "location": "Main Hall",
+  "title": "Making gaming more efficient and fun",
+  "details": "by Cong Nguyen"
+},
+{
+  "date": "1 September",
+  "time": "4pm",
+  "location": "Main Hall",
+  "title": "Opening Doors with JSON Web Tokens",
+  "details": "by Ben Dechrai"
+},
+{
+  "date": "1 September",
+  "time": "6pm",
+  "location": "Dining Hall",
+  "title": "Dinner",
+  "details": ""
+},
+{
+  "date": "1 September",
+  "time": "7pm",
+  "location": "Dining Hall",
+  "title": "Closing Remarks + Show & Tell",
+  "details": ""
+},
