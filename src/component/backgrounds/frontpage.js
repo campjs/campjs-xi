@@ -74,8 +74,8 @@ export const TopBG = props => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(147 -45.5) rotate(90) scale(367.5)"
         >
-          <stop offset="0.102875" stop-color="#F6DEC0" />
-          <stop offset="1" stop-color="#F3A99F" />
+          <stop offset="0.102875" stopColor="#F6DEC0" />
+          <stop offset="1" stopColor="#F3A99F" />
         </radialGradient>
       </defs>
     </svg>
