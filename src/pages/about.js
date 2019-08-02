@@ -10,7 +10,6 @@ import {
   FeatureText,
   HeadingText,
   MetaText,
-  SubHeadingText,
   UnorderList,
 } from 'component/text';
 import { Stylings } from 'component/providers';

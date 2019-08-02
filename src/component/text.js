@@ -163,6 +163,34 @@ export const MetaText = ({ children, ...props }) => {
   );
 };
 
+export const ScheduleRowTitle = ({ children, ...props }) => (
+  <Text
+    as="h3"
+    color="black"
+    fontSize="325"
+    fontWeight="400"
+    fontFamily="sans"
+    textDecoration="none"
+    {...props}
+  >
+    {children}
+  </Text>
+);
+
+export const ScheduleRowDesc = ({ children, ...props }) => (
+  <Text
+    as="p"
+    color="gray200"
+    fontSize="300"
+    fontWeight="400"
+    fontFamily="sans"
+    textDecoration="none"
+    {...props}
+  >
+    {children}
+  </Text>
+);
+
 export const NavItemText = ({ children, ...props }) => (
   <Text
     as="span"

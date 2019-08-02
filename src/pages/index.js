@@ -9,18 +9,13 @@ import { Stylings } from 'component/providers';
 import SEO from 'component/seo';
 import { Footer, Header } from 'component/navigation';
 import { Block, Section } from 'component/section';
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from 'component/button';
+import { SecondaryButton } from 'component/button';
 import {
   BodyText,
   FeatureText,
   SubFeatureText,
   HeadingText,
   Anchor,
-  OrderList,
   SubHeadingText,
   SpeakerHeadingText,
   ButtonText,

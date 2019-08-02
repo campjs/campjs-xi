@@ -140,6 +140,7 @@ const NavRight = styled.div`
   top: ${themeGet('space.500')};
   right: ${themeGet('space.500')};
   max-width: calc(100vw - ${themeGet('space.500')});
+  z-index: 1;
 `;
 
 const VerticalMenu = styled.nav`
@@ -233,7 +234,12 @@ export const Header = ({ ...props }) => {
             to="/call-for-papers"
             title="Call for Papers - Round one ends on the 22nd July"
           >
-            <NavItemText>Call for Papers 🕑</NavItemText>
+            <NavItemText>
+              Call for Papers{' '}
+              <span role="img" aria-label="Clock">
+                🕑
+              </span>
+            </NavItemText>
           </NavLink>
           <NavLink to="/about" title="About CampJS">
             <NavItemText>About</NavItemText>
@@ -308,7 +314,7 @@ export const Header = ({ ...props }) => {
                   />
                 </div>
                 <Button
-                  role="submit"
+                  role="button"
                   color="black"
                   fontSize="200"
                   fontWeight="400"

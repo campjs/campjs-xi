@@ -4,7 +4,8 @@ const theme = {
     '100': '0.75rem',
     '200': '0.875rem',
     '300': '1rem', // base font-size: 16px
-    '350': '1.25rem', // base font-size: 16px
+    '325': '1.125rem',
+    '350': '1.25rem',
     '400': '1.5rem',
     '500': '2rem',
     '600': '3rem',
