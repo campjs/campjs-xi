@@ -1,6 +1,6 @@
 /* @jsx jsx */
 import { MidBG, TopBG } from 'component/backgrounds/frontpage';
-import { SpeakerImage, SponsorImage } from 'component/image';
+import { SpeakerImage } from 'component/image';
 import React from 'react';
 import { css, jsx } from '@emotion/core';
 import { Flex, Box } from '@rebass/emotion';
