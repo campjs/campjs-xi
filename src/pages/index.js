@@ -297,4 +297,55 @@ const SpeakerRight = props => (
   </>
 );
 
+const IndexPage = () => {
+  return (
+    <Stylings>
+      <SEO />
+      <Box
+        bg="#adb6d5"
+        css={css`
+          position: relative;
+        `}
+      >
+        <TopBG />
+        <HeaderSection
+          css={css`
+            position: relative;
+          `}
+        />
+        <DetailsSection
+          css={css`
+            position: relative;
+          `}
+        />
+      </Box>
+      <Box
+        bg="#adb6d5"
+        css={css`
+          position: relative;
+          padding-bottom: 20vw;
+        `}
+      >
+        <MidBG />
+        <GetInvolvedSection
+          css={css`
+            position: relative;
+          `}
+        />
+        <SpeakersSection
+          css={css`
+            position: relative;
+          `}
+        />
+        <DiversitySection
+          css={theme => css`
+            position: relative;
+          `}
+        />
+      </Box>
+      <Footer isAlt={false} />
+    </Stylings>
+  );
+};
+
 export default IndexPage;

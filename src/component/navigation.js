@@ -247,9 +247,9 @@ export const Header = ({ ...props }) => {
           {/*<NavLink to="/speakers" title="Talks & Workshops as volunteered by Speakers">*/}
           {/*  <NavItemText>Talks & Workshops</NavItemText>*/}
           {/*</NavLink>*/}
-          {/*<NavLink to="/schedule" title="Events Schedule">*/}
-          {/*  <NavItemText>Schedule</NavItemText>*/}
-          {/*</NavLink>*/}
+          <NavLink to="/schedule" title="Events Schedule">
+            <NavItemText>Schedule</NavItemText>
+          </NavLink>
           <NavLink
             to="/about#volunteer"
             title="Volunteer to help out on the day!"
