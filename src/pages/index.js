@@ -243,6 +243,21 @@ const SpeakersSection = props => {
         }
       })
     }
+    <Block w={[12]} c={[1]} alignItems="flex-end">
+      <ButtonText
+        color="white"
+        css={[
+          css`
+            text-align: right;
+            text-decoration: underline;
+          `,
+          sTextShadow,
+        ]}
+      >
+        View the full <Anchor to="/schedule">schedule</Anchor> >
+
+      </ButtonText>
+    </Block>
   </Section>
 };
 
