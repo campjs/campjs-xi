@@ -5,7 +5,13 @@ import SEO from 'component/seo';
 import { Stylings } from 'component/providers';
 import { Footer, Header } from 'component/navigation';
 import { Grid, Block, Section } from 'component/section';
-import { FeatureText, SubFeatureText } from 'component/text';
+import {
+  FeatureText,
+  SubFeatureText,
+  HeadingText,
+  BodyText,
+  Anchor,
+} from 'component/text';
 import {
   SpeakerTalksBlockLeft,
   SpeakerTalksBlockRight,
@@ -108,6 +114,21 @@ const SpeakersPage = () => {
               }
             })}
         </Grid>
+      </Section>
+
+      <Section isGrid bg="orange400">
+        <Block w={[12, 12, 6]} c={[1, 1, 4]}>
+          <HeadingText color="yellow100">More Talks & Workshops</HeadingText>
+          <BodyText color="yellow100">
+            We've finished our first round of submissions, and we'll soon start
+            our second, so expect more talks and workshops soon!
+          </BodyText>
+          <BodyText color="yellow100">
+            Take a look at our{' '}
+            <Anchor to="/call-for-papers">Call For Speakers</Anchor> for more
+            information.
+          </BodyText>
+        </Block>
       </Section>
 
       <Footer />

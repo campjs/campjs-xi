@@ -1,3 +1,4 @@
+import { jsx } from '@emotion/core';
 import React from 'react';
 import { Stylings } from 'component/providers';
 import SEO from 'component/seo';
@@ -5,6 +6,7 @@ import { Footer, Header } from 'component/navigation';
 import { Block, Section } from 'component/section';
 import { PrimaryButton, SecondaryButton } from 'component/button';
 import {
+  Anchor,
   BodyText,
   FeatureText,
   HeadingText,
@@ -12,6 +14,31 @@ import {
   OrderList,
   SubHeadingText,
 } from 'component/text';
+
+const HeaderButtonBlock = () => (
+  <Block mt={[400, 400, 500, 500]} w={[8, 6, 4, 4]} c={[3, 4, 7, 5]}>
+    <PrimaryButton
+      tin="up"
+      width="100%"
+      title="Google Form: CampJS X Call For Papers"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
+    >
+      Submit a talk or workshop
+    </PrimaryButton>
+  </Block>
+);
+
+const MiddleSectionButtonBlock = () => (
+  <Block mt={[500, 500, 100, 100]} w={[8, 6, 4, 4]} c={[3, 4, 9, 9]}>
+    <SecondaryButton
+      width="100%"
+      title="Google Form: CampJS X Call For Papers"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
+    >
+      Submit a talk or workshop
+    </SecondaryButton>
+  </Block>
+);
 
 const CallForPapersPage = () => {
   return (
@@ -25,27 +52,29 @@ const CallForPapersPage = () => {
             papers
           </FeatureText>
           <BodyText tin="up">
-            Submissions for the first CFP close on midnight of July 22nd! (you
-            can still run an activity)
+            The first round of submissions has finished, and{' '}
+            <Anchor to="/speakers">speakers</Anchor> have been chosen.
           </BodyText>
           <BodyText tin="up">
-            We organise as much of CampJS in the open as possible with Github
-            issues.
+            The{' '}
+            <strong>
+              second round of talk and workshop submissions will be open soon
+            </strong>
+            . Keep up to date by{' '}
+            <Anchor
+              href="https://twitter.com/campjs"
+              title="Follow the CampJS Twitter"
+            >
+              following us on Twitter
+            </Anchor>{' '}
+            or subscribing to our mailing list from the site's menu.
           </BodyText>
           {/*<BodyText tin="up">*/}
           {/*  Access Slack chat on WeAllJS using /join-private #campjs*/}
           {/*</BodyText>*/}
         </Block>
-        <Block mt={[400, 400, 500, 500]} w={[8, 6, 4, 4]} c={[3, 4, 7, 5]}>
-          <PrimaryButton
-            tin="up"
-            width="100%"
-            title="Google Form: CampJS X Call For Papers"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
-          >
-            Submit a talk or workshop
-          </PrimaryButton>
-        </Block>
+
+        {/*<HeaderButtonBlock />*/}
       </Section>
 
       <Section isGrid bg="gray400">
@@ -139,43 +168,36 @@ const CallForPapersPage = () => {
             .
           </BodyText>
         </Block>
-        <Block mt={[500, 500, 100, 100]} w={[8, 6, 4, 4]} c={[3, 4, 9, 9]}>
-          <SecondaryButton
-            width="100%"
-            title="Google Form: CampJS X Call For Papers"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
-          >
-            Submit a talk or workshop
-          </SecondaryButton>
-        </Block>
+
+        {/*<MiddleSectionButtonBlock />*/}
       </Section>
 
-      <Section isGrid bg="orange200">
+      <Section isGrid bg="tan100">
         <Block w={[12, 8, 5, 4]} c={[1, 3, 3, 3]}>
-          <FeatureText as="h4" color="gray100">
+          <FeatureText as="h4" color="tan300">
             Other
             <br />
             talents?
           </FeatureText>
         </Block>
         <Block w={[12, 8, 4, 4]} c={[1, 3, 8, 7]}>
-          <BodyText color="yellow100">
-            There is always extra help to be lent on the days for random tasks
+          <BodyText color="black">
+            There is always extra help to be lent on the days, for random tasks
             and fun corralling.
           </BodyText>
-          <BodyText color="yellow100" mb="100">
-            If you want to volunteer but don’t know where to start,{' '}
+          <BodyText color="black" mb="100">
+            If you want to volunteer then please visit our{' '}
+            <Anchor
+              to="/about#volunteer"
+              title="Volunteer to help out on the day!"
+            >
+              Get involved
+            </Anchor>{' '}
+            section or{' '}
             <a className="anchor" href="mailto:organisers-team@campjs.com">
               get in touch
             </a>{' '}
-            with an organiser. Or, check out our{' '}
-            <a
-              className="anchor"
-              href="https://github.com/campjs/campjs-x/issues"
-            >
-              Github
-            </a>
-            , where we organise as much of the Camp in the open as possible.
+            with an organiser.
           </BodyText>
         </Block>
       </Section>

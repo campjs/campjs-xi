@@ -342,8 +342,7 @@ const AboutPage = () => {
           <Block w={[12, 8, 6, 6]} c={[1, 3, 1, 1]}>
             <HeadingText color="gray100">Get involved</HeadingText>
             <BodyText color="yellow100">
-              Issue tracker: We organise as much of CampJS in the open as
-              possible on{' '}
+              We organise as much of CampJS in the open as possible on{' '}
               <a
                 className="anchor"
                 href="https://github.com/campjs/campjs-x/issues"
@@ -352,17 +351,28 @@ const AboutPage = () => {
               </a>
               .
             </BodyText>
+            <BodyText color="yellow100">
+              If you have a question or would like to suggest an improvement for
+              the meetup,{' '}
+              <Anchor
+                href="https://github.com/campjs/campjs-x/issues"
+                title="Suggest an improvement"
+              >
+                open a new issue
+              </Anchor>
+              . We'll respond within a few hours.
+            </BodyText>
           </Block>
           <Block w={[12, 8, 6, 6]} c={[1, 3, 7, 7]}>
             <HeadingText color="gray100">Volunteer</HeadingText>
             <BodyText color="yellow100" mb="100">
-              We’re always looking for people to help out, if you can’ find the
-              right jobs for you, just fill out{' '}
+              We’re always looking for people to help out. To find the right for
+              you, just fill out{' '}
               <Anchor
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfDTXIvVdgskbl_NgkW_E2UgDOLOGWm_E-79YuPGKAdFfDjHA/viewform"
                 title="Volunteer Form"
               >
-                this form
+                our helpful Volunteer form
               </Anchor>{' '}
               and we’ll get in touch.
             </BodyText>
