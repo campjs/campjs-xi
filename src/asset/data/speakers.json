@@ -142,5 +142,17 @@
         "length": 30,
         "bio": "",
         "featured": false
+    },
+    {
+        "title": "Web Sharing is Web Caring",
+        "description": "Third party JavaScript, tracking scripts, iframes! What are you doing with all those share buttons on your site?\nThe Web Share API is here and you should know about it! It's not just a new API though, it brings benefits to your users you may not have thought of.\nWhat if you want to have things shared to your site though? Then you need to know how to become a Web Share Target. We'll check that out too.\nLet's investigate how the web platform is solving problems you didn't know you had and making sharing a more caring part of the web.",
+        "name": "Phil Nash",
+        "twitter": "philnash",
+        "website": "",
+        "headshot": "philnash.jpg",
+        "type": "talk",
+        "length": 30,
+        "bio": "",
+        "featured": false
     }
 ]
