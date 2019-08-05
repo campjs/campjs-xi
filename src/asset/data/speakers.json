@@ -5,11 +5,11 @@
         "name": "Steven Cooper",
         "twitter": "DeveloperSteve",
         "website": "",
-        "headshotPath": "images/speaker/developersteve.jpg",
-        "headshot": "developersteve",
+        "headshot": "developersteve.jpg",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Automating the $h1T out of everything because I am very very tired",
@@ -17,11 +17,11 @@
         "name": "Calvin Dass",
         "twitter": "",
         "website": "calvindass.com",
-        "headshotPath": "images/speaker/calvindass.jpg",
-        "headshot": "calvindass",
+        "headshot": "calvindass.jpg",
         "type": "talk",
         "length": 20,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Making gaming more efficient and fun",
@@ -29,11 +29,11 @@
         "name": "Cong Nguyen",
         "twitter": "devxcong",
         "website": "",
-        "headshotPath": "images/speaker/devxcong.jpg",
-        "headshot": "devxcong",
+        "headshot": "devxcong.jpg",
         "type": "talk",
         "length": 20,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Strike a pose - Gesture recognition in JavaScript with Machine Learning & Arduino",
@@ -41,11 +41,11 @@
         "name": "Charlie Gerard",
         "twitter": "devdevcharlie",
         "website": "",
-        "headshotPath": "images/speaker/devdevcharlie.jpg",
-        "headshot": "devdevcharlie",
+        "headshot": "devdevcharlie.jpg",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Synth and Sequencing for beginners",
@@ -53,12 +53,11 @@
         "name": "Julian Scharf",
         "twitter": "",
         "website": "https://www.linkedin.com/in/jrjscharf/",
-        "headshotPath": "images/speaker/julian.jpg",
-        "headshot": "julian",
+        "headshot": "julian.jpg",
         "type": "workshop",
         "length": 60,
         "bio": "",
-        "ignore": true
+        "featured": false
     },
     {
         "title": "React Patterns And Refactoring",
@@ -66,11 +65,11 @@
         "name": "Inga Pflaumer",
         "twitter": "IngaPflaumer",
         "website": "",
-        "headshotPath": "images/speaker/ingapflaumer.jpg",
-        "headshot": "ingapflaumer",
+        "headshot": "ingapflaumer.jpg",
         "type": "workshop",
         "length": 150,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Refactoring React With Juniors",
@@ -78,12 +77,11 @@
         "name": "Inga Pflaumer",
         "twitter": "IngaPflaumer",
         "website": "",
-        "headshotPath": "images/speaker/ingapflaumer.jpg",
-        "headshot": "ingapflaumer",
+        "headshot": "ingapflaumer.jpg",
         "type": "talk",
         "length": 20,
         "bio": "",
-        "ignore": true
+        "featured": false
     },
     {
         "title": "Demystifying and accepting payments online",
@@ -91,11 +89,11 @@
         "name": "Daniel Miller",
         "twitter": "dalanmiller",
         "website": "",
-        "headshotPath": "images/speaker/dalanmiller.png",
-        "headshot": "dalanmiller",
+        "headshot": "dalanmiller.png",
         "type": "workshop",
         "length": 90,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Opening Doors with JSON Web Tokens",
@@ -103,11 +101,11 @@
         "name": "Ben Dechrai",
         "twitter": "bendechrai",
         "website": "",
-        "headshotPath": "images/speaker/bendechrai.png",
-        "headshot": "bendechrai",
+        "headshot": "bendechrai.png",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "The nerurodiversity factor in tech",
@@ -115,11 +113,11 @@
         "name": "Julian Scharf",
         "twitter": "",
         "website": "https://www.linkedin.com/in/jrjscharf/",
-        "headshotPath": "images/speaker/julian.jpg",
-        "headshot": "julian",
+        "headshot": "julian.jpg",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Fewer Bugs with Better TypeScript Types",
@@ -127,11 +125,11 @@
         "name": "Rob Howard",
         "twitter": "damncabbage",
         "website": "",
-        "headshotPath": "images/speaker/damncabbage.jpg",
-        "headshot": "damncabbage",
+        "headshot": "damncabbage.jpg",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     },
     {
         "title": "Tech communities",
@@ -139,10 +137,10 @@
         "name": "Tanya Butenko",
         "twitter": "ButenkoMe",
         "website": "",
-        "headshotPath": "images/speaker/butenkome.jpg",
-        "headshot": "butenkome",
+        "headshot": "butenkome.jpg",
         "type": "talk",
         "length": 30,
-        "bio": ""
+        "bio": "",
+        "featured": true
     }
 ]

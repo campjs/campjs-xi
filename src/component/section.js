@@ -50,21 +50,23 @@ export const Grid = ({ children, rowGap, colGap, ...props }) => (
   </div>
 );
 
-export const Block = ({ w = 1, c = 'auto', children, ...props }) => {
-  const styles = [];
-  [].concat(w).forEach((width, bp) => {
-    if (gx.w[bp] && gx.w[bp][width]) styles.push(gx.w[bp][width]);
-  });
-  [].concat(c).forEach((column, bp) => {
-    column = column == null ? 'auto' : column;
-    if (gx.w[bp] && gx.c[bp][column]) styles.push(gx.c[bp][column]);
-  });
-  return (
-    <Box css={css(styles)} {...props}>
-      {children}
-    </Box>
-  );
-};
+export const Block = React.forwardRef(
+  ({ w = 1, c = 'auto', children, ...props }, ref) => {
+    const styles = [];
+    [].concat(w).forEach((width, bp) => {
+      if (gx.w[bp] && gx.w[bp][width]) styles.push(gx.w[bp][width]);
+    });
+    [].concat(c).forEach((column, bp) => {
+      column = column == null ? 'auto' : column;
+      if (gx.w[bp] && gx.c[bp][column]) styles.push(gx.c[bp][column]);
+    });
+    return (
+      <Box ref={ref} css={css(styles)} {...props}>
+        {children}
+      </Box>
+    );
+  }
+);
 
 export const Section = ({
   children,

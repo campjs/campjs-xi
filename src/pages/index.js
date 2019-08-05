@@ -1,6 +1,5 @@
 /* @jsx jsx */
-import { MidBG, TopBG } from 'component/backgrounds/frontpage';
-import { SpeakerImage } from 'component/image';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { css, jsx } from '@emotion/core';
 import { Flex, Box } from '@rebass/emotion';
@@ -17,10 +16,10 @@ import {
   HeadingText,
   Anchor,
   SubHeadingText,
-  SpeakerHeadingText,
   ButtonText,
 } from 'component/text';
-import { graphql, useStaticQuery } from 'gatsby';
+import { SpeakerBlockLeft, SpeakerBlockRight } from 'component/speakers';
+import { MidBG, TopBG } from 'component/backgrounds/frontpage';
 
 import speakers from 'asset/data/speakers.json';
 
@@ -192,125 +191,47 @@ const DiversitySection = props => (
   </Section>
 );
 
-const speakerHeadshots = () => (
-  useStaticQuery(
-    graphql`
-      query {
-        developersteve: file(relativePath: { eq: "speakers/developersteve.jpg" }) {
-          publicURL
-        }
-        calvindass: file(relativePath: { eq: "speakers/calvindass.jpg" }) {
-          publicURL
-        }
-        devxcong: file(relativePath: { eq: "speakers/devxcong.jpg" }) {
-          publicURL
-        }
-        devdevcharlie: file(relativePath: { eq: "speakers/devdevcharlie.jpg" }) {
-          publicURL
-        }
-        julian: file(relativePath: { eq: "speakers/julian.jpg" }) {
-          publicURL
-        }
-        ingapflaumer: file(relativePath: { eq: "speakers/ingapflaumer.jpg" }) {
-          publicURL
-        }
-        dalanmiller: file(relativePath: { eq: "speakers/dalanmiller.png" }) {
-          publicURL
-        }
-        bendechrai: file(relativePath: { eq: "speakers/bendechrai.png" }) {
-          publicURL
-        }
-        damncabbage: file(relativePath: { eq: "speakers/damncabbage.jpg" }) {
-          publicURL
-        }
-        butenkome: file(relativePath: { eq: "speakers/butenkome.jpg" }) {
-          publicURL
-        }
-      }
-    `
-  )
-);
-
 const SpeakersSection = props => {
-  const myFace = speakerHeadshots();
-  return <Section isGrid bg="transparent" {...props}>
-    {
-      speakers.filter(speaker => !speaker.ignore).map((speaker, idx) => {
-        if (idx%2) {
-          return <SpeakerLeft key={idx} image={myFace[speaker.headshot].publicURL} {...speaker} />
-        } else {
-          return <SpeakerRight key={idx} image={myFace[speaker.headshot].publicURL} {...speaker} />
-        }
-      })
-    }
-    <Block w={[12]} c={[1]} alignItems="flex-end">
-      <ButtonText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-            text-decoration: underline;
-          `,
-          sTextShadow,
-        ]}
-      >
-        View the full <Anchor to="/schedule">schedule</Anchor> >
-
-      </ButtonText>
-    </Block>
-  </Section>
+  return (
+    <Section isGrid bg="transparent" {...props}>
+      {speakers
+        .filter(speaker => !!speaker.featured)
+        .map((speaker, idx) => {
+          if (idx % 2) {
+            return (
+              <SpeakerBlockLeft
+                key={idx}
+                image={speaker.headshot}
+                {...speaker}
+              />
+            );
+          } else {
+            return (
+              <SpeakerBlockRight
+                key={idx}
+                image={speaker.headshot}
+                {...speaker}
+              />
+            );
+          }
+        })}
+      <Block w={[12]} c={[1]} alignItems="flex-end">
+        <ButtonText
+          color="white"
+          css={[
+            css`
+              text-align: right;
+              text-decoration: underline;
+            `,
+            sTextShadow,
+          ]}
+        >
+          <Anchor to="/speakers">View all speakers ></Anchor>
+        </ButtonText>
+      </Block>
+    </Section>
+  );
 };
-
-const SpeakerLeft = props => (
-  <>
-   <Block w={[6, 4, 4, 4]} c={[1, 1, 1, 1]} mb={['700', '700', '600']}>
-      <SpeakerImage
-        src={props.image}
-        alt={props.name}
-        width="300px"
-        height="300px"
-      />
-    </Block>
-    <Block w={[5, 4, 3, 3]} c={[8, 5, 5, 5]} mb={['700', '700', '600']}>
-      <SpeakerHeadingText color="white">{props.name}</SpeakerHeadingText>
-      <BodyText color="white">{props.title}</BodyText>
-    </Block>
-  </>
-)
-
-const SpeakerRight = props => (
-  <>
-  <Block w={[5, 4, 3, 3]} c={[1, 5, 6, 6]} mb={['700', null, '600']}>
-      <SpeakerHeadingText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-          `,
-          sTextShadow,
-        ]}
-      >
-        {props.name}
-      </SpeakerHeadingText>
-      <BodyText
-        color="white"
-        css={css`
-          text-align: right;
-        `}
-      >
-        {props.title}
-      </BodyText>
-  </Block>
-  <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]} mb={['700', '700', '600']}>
-    <SpeakerImage
-      src={props.image}
-      alt={props.name}
-      width="300px"
-      height="300px"
-    />
-  </Block>
-  </>
-);
 
 const IndexPage = () => {
   return (

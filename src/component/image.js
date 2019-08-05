@@ -1,32 +1,55 @@
 /* @jsx jsx */
 import React from 'react';
 import { jsx, css } from '@emotion/core';
+import { Box } from '@rebass/emotion';
+import { getAllFluidImages } from 'util/queries';
 
-export const SpeakerImage = ({ src, alt, width, height, ...props }) => {
-  const baseStyle = css`
-    border-radius: 2px;
-    max-width: ${width};
-    width: 100%;
-  `;
+const speakerImageStyles = {};
+const getSpeakerImageStyle = width => {
+  if (!(width in speakerImageStyles)) {
+    speakerImageStyles[width] = css`
+      border-radius: 2px;
+      max-width: ${width};
+      width: 100%;
+    `;
+  }
+
+  return speakerImageStyles[width];
+};
+
+export const SpeakerImage = ({
+  image,
+  alt,
+  color = '#9da7c1',
+  width,
+  height,
+  ...props
+}) => {
+  const images = getAllFluidImages();
+  const matchingImage = images.find(i => i.name === image);
+
+  if (!matchingImage) {
+    throw new Error(`Unavailable image: ${image}`);
+  }
   return (
-    <div
+    <Box
       {...props}
       css={[
-        baseStyle,
+        getSpeakerImageStyle(width),
         css`
           height: 0;
           padding-bottom: 100%;
-          background-color: #9da7c1;
+          background-color: ${color};
         `,
       ]}
     >
       <img
-        src={src}
+        src={matchingImage.src || ''}
         alt={alt}
-        width={width}
-        height={alt}
+        width={matchingImage.width}
+        height={matchingImage.height}
         css={[
-          baseStyle,
+          getSpeakerImageStyle(width),
           css`
             mix-blend-mode: soft-light;
             filter: grayscale(1);
@@ -35,6 +58,6 @@ export const SpeakerImage = ({ src, alt, width, height, ...props }) => {
         ]}
         {...props}
       />
-    </div>
+    </Box>
   );
 };
