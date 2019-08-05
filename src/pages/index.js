@@ -145,38 +145,12 @@ const DetailsSection = props => (
   </Section>
 );
 
-const GetInvolvedSection = props => (
-  <Section isGrid bg="transparent" {...props}>
-    <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 3]} mb="600">
-      <SubFeatureText color="white" css={sTextShadow}>
-        Get involved
-      </SubFeatureText>
-      <BodyText mb="100" color="white" css={sTextShadow}>
-        Issue tracker: We organise as much of CampJS in the open as possible on{' '}
-        <a className="anchor" href="https://github.com/campjs/campjs-x/issues">
-          Github issues
-        </a>
-        .
-      </BodyText>
-    </Block>
-    <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 3]} mb="100">
-      <SubFeatureText color="white" css={sTextShadow}>
-        Volunteer
-      </SubFeatureText>
-      <BodyText mb="100" color="white" css={sTextShadow}>
-        We’re always looking for people to help out, if you can’ find the right
-        jobs for you, just fill out this form and we’ll get in touch.
-      </BodyText>
-    </Block>
-  </Section>
-);
-
 const DiversitySection = props => (
   <Section isGrid bg="transparent" {...props}>
     <Block w={[12, 8, 4, 4]} c={[1, 3, 3, 3]}>
-      <HeadingText color="white" css={sTextShadow}>
+      <SubFeatureText color="white" css={sTextShadow}>
         Diversity & Inclusivity
-      </HeadingText>
+      </SubFeatureText>
     </Block>
     <Block w={[12, 8, 4, 4]} c={[1, 3, 7, 7]} mb="100">
       <BodyText mb="100" color="white" css={sTextShadow}>
@@ -266,11 +240,6 @@ const IndexPage = () => {
         `}
       >
         <MidBG />
-        <GetInvolvedSection
-          css={css`
-            position: relative;
-          `}
-        />
         <SpeakersSection
           css={css`
             position: relative;

@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Footer, Header } from 'component/navigation';
 import { Block, Grid, Section } from 'component/section';
 import {
+  Anchor,
   BodyText,
   FeatureText,
   HeadingText,
@@ -336,7 +337,7 @@ const AboutPage = () => {
         </Block>
       </Section>
 
-      <Section id="volunteer" bg="orange200">
+      <Section id="volunteer" bg="gray400">
         <Grid rowGap="space.600">
           <Block w={[12, 8, 6, 6]} c={[1, 3, 1, 1]}>
             <HeadingText color="gray100">Get involved</HeadingText>
@@ -356,8 +357,14 @@ const AboutPage = () => {
             <HeadingText color="gray100">Volunteer</HeadingText>
             <BodyText color="yellow100" mb="100">
               We’re always looking for people to help out, if you can’ find the
-              right jobs for you, just fill out this form and we’ll get in
-              touch.
+              right jobs for you, just fill out{' '}
+              <Anchor
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfDTXIvVdgskbl_NgkW_E2UgDOLOGWm_E-79YuPGKAdFfDjHA/viewform"
+                title="Volunteer Form"
+              >
+                this form
+              </Anchor>{' '}
+              and we’ll get in touch.
             </BodyText>
           </Block>
         </Grid>
