@@ -126,8 +126,7 @@ const DetailsSection = props => (
     </Block>
     <Block w={[12, 8, 4, 4]} c={[1, 3, 7, 7]} mb="500">
       <BodyText color="white" css={sTextShadow}>
-        Take the to main hall to hack on self-directed or collaborative
-        projects.
+        Take to main hall to hack on self-directed or collaborative projects.
       </BodyText>
     </Block>
 
