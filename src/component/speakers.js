@@ -159,7 +159,7 @@ export const SpeakerTalksBlockLeft = ({
         css={rTransCss}
         w={[6, 4, 3, 4]}
         c={[4, 1, 2, 1]}
-        mb={['500', '700', '600']}
+        mb={['500', '100']}
       >
         <SpeakerImage
           image={image}

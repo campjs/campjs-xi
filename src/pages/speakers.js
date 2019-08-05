@@ -5,7 +5,7 @@ import SEO from 'component/seo';
 import { Stylings } from 'component/providers';
 import { Footer, Header } from 'component/navigation';
 import { Grid, Block, Section } from 'component/section';
-import { FeatureText } from 'component/text';
+import { FeatureText, SubFeatureText } from 'component/text';
 import {
   SpeakerTalksBlockLeft,
   SpeakerTalksBlockRight,
@@ -29,33 +29,84 @@ const SpeakersPage = () => {
         <Grid
           css={css`
             grid-auto-flow: column;
+            & > *:last-child {
+              margin-bottom: 0;
+            }
           `}
         >
-          {speakers.map((speaker, idx) => {
-            if (idx % 2) {
-              return (
-                <SpeakerTalksBlockLeft
-                  key={idx}
-                  image={speaker.headshot}
-                  headingColor="yellow100"
-                  textColor="gray100"
-                  metaColor="gray200"
-                  {...speaker}
-                />
-              );
-            } else {
-              return (
-                <SpeakerTalksBlockRight
-                  key={idx}
-                  image={speaker.headshot}
-                  headingColor="yellow100"
-                  textColor="gray100"
-                  metaColor="gray200"
-                  {...speaker}
-                />
-              );
+          <Block w={12} c={1} mb={['700', '700', '700']}>
+            <SubFeatureText color="yellow100">Talks</SubFeatureText>
+          </Block>
+          {speakers
+            .filter(speaker => speaker.type === 'talk')
+            .map((speaker, idx) => {
+              if (idx % 2) {
+                return (
+                  <SpeakerTalksBlockLeft
+                    key={idx}
+                    image={speaker.headshot}
+                    headingColor="yellow100"
+                    textColor="gray100"
+                    metaColor="gray200"
+                    {...speaker}
+                  />
+                );
+              } else {
+                return (
+                  <SpeakerTalksBlockRight
+                    key={idx}
+                    image={speaker.headshot}
+                    headingColor="yellow100"
+                    textColor="gray100"
+                    metaColor="gray200"
+                    {...speaker}
+                  />
+                );
+              }
+            })}
+        </Grid>
+      </Section>
+
+      <Section bg="gray100">
+        <Grid
+          css={css`
+            grid-auto-flow: column;
+            & > *:last-child {
+              margin-bottom: 0;
             }
-          })}
+          `}
+        >
+          <Block w={12} c={1} mb={['700', '700', '700']}>
+            <SubFeatureText color="gray400">Workshops</SubFeatureText>
+          </Block>
+
+          {speakers
+            .filter(speaker => speaker.type === 'workshop')
+            .map((speaker, idx) => {
+              if (idx % 2) {
+                return (
+                  <SpeakerTalksBlockLeft
+                    key={idx}
+                    image={speaker.headshot}
+                    headingColor="black"
+                    textColor="gray400"
+                    metaColor="gray300"
+                    {...speaker}
+                  />
+                );
+              } else {
+                return (
+                  <SpeakerTalksBlockRight
+                    key={idx}
+                    image={speaker.headshot}
+                    headingColor="black"
+                    textColor="gray400"
+                    metaColor="gray300"
+                    {...speaker}
+                  />
+                );
+              }
+            })}
         </Grid>
       </Section>
 
