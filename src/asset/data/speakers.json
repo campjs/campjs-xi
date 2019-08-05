@@ -21,7 +21,7 @@
         "type": "talk",
         "length": 20,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Making gaming more efficient and fun",
@@ -33,7 +33,7 @@
         "type": "talk",
         "length": 20,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Strike a pose - Gesture recognition in JavaScript with Machine Learning & Arduino",
@@ -69,7 +69,7 @@
         "type": "workshop",
         "length": 150,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Refactoring React With Juniors",
@@ -81,7 +81,7 @@
         "type": "talk",
         "length": 20,
         "bio": "",
-        "featured": false
+        "featured": true
     },
     {
         "title": "Demystifying and accepting payments online",
@@ -93,7 +93,7 @@
         "type": "workshop",
         "length": 90,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Opening Doors with JSON Web Tokens",
@@ -105,7 +105,7 @@
         "type": "talk",
         "length": 30,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "The nerurodiversity factor in tech",
@@ -117,7 +117,7 @@
         "type": "talk",
         "length": 30,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Fewer Bugs with Better TypeScript Types",
@@ -129,7 +129,7 @@
         "type": "talk",
         "length": 30,
         "bio": "",
-        "featured": true
+        "featured": false
     },
     {
         "title": "Tech communities",
@@ -141,6 +141,6 @@
         "type": "talk",
         "length": 30,
         "bio": "",
-        "featured": true
+        "featured": false
     }
 ]
