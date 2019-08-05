@@ -53,7 +53,7 @@ const transitions = {
   `,
 };
 
-const useTransitionIn = transitionInType => {
+const useTransitionIn = (transitionInType, transitionMap = transitions) => {
   const isInRef = React.useRef(false);
   let ref;
   let isInView;
@@ -65,7 +65,7 @@ const useTransitionIn = transitionInType => {
     if (isInView && !isInRef.current) {
       isInRef.current = isInView;
     }
-    transCss = transitions[transitionInType](isInRef.current);
+    transCss = transitionMap[transitionInType](isInRef.current);
   }
   return [ref, transCss];
 };

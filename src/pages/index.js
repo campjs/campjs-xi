@@ -1,9 +1,9 @@
 /* @jsx jsx */
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { css, jsx } from '@emotion/core';
 import { Flex, Box } from '@rebass/emotion';
 import themeGet from '@styled-system/theme-get';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Stylings } from 'component/providers';
 import SEO from 'component/seo';
 import { Footer, Header } from 'component/navigation';
@@ -20,6 +20,7 @@ import {
 } from 'component/text';
 import { SpeakerBlockLeft, SpeakerBlockRight } from 'component/speakers';
 import { MidBG, TopBG } from 'component/backgrounds/frontpage';
+import { FirefliesBG } from 'component/backgrounds/fireflies';
 
 import speakers from 'asset/data/speakers.json';
 
@@ -280,6 +281,7 @@ const IndexPage = () => {
             position: relative;
           `}
         />
+        <FirefliesBG />
       </Box>
       <Footer isAlt={false} />
     </Stylings>
