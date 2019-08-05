@@ -5,7 +5,8 @@
         "name": "Steven Cooper",
         "twitter": "DeveloperSteve",
         "website": "",
-        "headshot": "/images/speakers/developersteve.jpg",
+        "headshotPath": "images/speaker/developersteve.jpg",
+        "headshot": "developersteve",
         "type": "talk",
         "length": 30,
         "bio": ""
@@ -16,7 +17,8 @@
         "name": "Calvin Dass",
         "twitter": "",
         "website": "calvindass.com",
-        "headshot": "/images/speakers/calvindass.jpg",
+        "headshotPath": "images/speaker/calvindass.jpg",
+        "headshot": "calvindass",
         "type": "talk",
         "length": 20,
         "bio": ""
@@ -27,7 +29,8 @@
         "name": "Cong Nguyen",
         "twitter": "devxcong",
         "website": "",
-        "headshot": "/images/speakers/devxcong.jpg",
+        "headshotPath": "images/speaker/devxcong.jpg",
+        "headshot": "devxcong",
         "type": "talk",
         "length": 20,
         "bio": ""
@@ -38,7 +41,8 @@
         "name": "Charlie Gerard",
         "twitter": "devdevcharlie",
         "website": "",
-        "headshot": "/images/speakers/devdevcharlie.jpg",
+        "headshotPath": "images/speaker/devdevcharlie.jpg",
+        "headshot": "devdevcharlie",
         "type": "talk",
         "length": 30,
         "bio": ""
@@ -49,10 +53,12 @@
         "name": "Julian Scharf",
         "twitter": "",
         "website": "https://www.linkedin.com/in/jrjscharf/",
-        "headshot": "/images/speakers/julian.jpg",
+        "headshotPath": "images/speaker/julian.jpg",
+        "headshot": "julian",
         "type": "workshop",
         "length": 60,
-        "bio": ""
+        "bio": "",
+        "ignore": true
     },
     {
         "title": "React Patterns And Refactoring",
@@ -60,7 +66,8 @@
         "name": "Inga Pflaumer",
         "twitter": "IngaPflaumer",
         "website": "",
-        "headshot": "/images/speakers/ingapflaumer.jpg",
+        "headshotPath": "images/speaker/ingapflaumer.jpg",
+        "headshot": "ingapflaumer",
         "type": "workshop",
         "length": 150,
         "bio": ""
@@ -71,10 +78,12 @@
         "name": "Inga Pflaumer",
         "twitter": "IngaPflaumer",
         "website": "",
-        "headshot": "/images/speakers/IngaPflaumer.jpg",
+        "headshotPath": "images/speaker/ingapflaumer.jpg",
+        "headshot": "ingapflaumer",
         "type": "talk",
         "length": 20,
-        "bio": ""
+        "bio": "",
+        "ignore": true
     },
     {
         "title": "Demystifying and accepting payments online",
@@ -82,7 +91,8 @@
         "name": "Daniel Miller",
         "twitter": "dalanmiller",
         "website": "",
-        "headshot": "/images/speakers/dalanmiller.png",
+        "headshotPath": "images/speaker/dalanmiller.png",
+        "headshot": "dalanmiller",
         "type": "workshop",
         "length": 90,
         "bio": ""
@@ -93,7 +103,8 @@
         "name": "Ben Dechrai",
         "twitter": "bendechrai",
         "website": "",
-        "headshot": "/images/speakers/bendechrai.png",
+        "headshotPath": "images/speaker/bendechrai.png",
+        "headshot": "bendechrai",
         "type": "talk",
         "length": 30,
         "bio": ""
@@ -104,7 +115,8 @@
         "name": "Julian Scharf",
         "twitter": "",
         "website": "https://www.linkedin.com/in/jrjscharf/",
-        "headshot": "/images/speakers/julian.jpg",
+        "headshotPath": "images/speaker/julian.jpg",
+        "headshot": "julian",
         "type": "talk",
         "length": 30,
         "bio": ""
@@ -115,7 +127,8 @@
         "name": "Rob Howard",
         "twitter": "damncabbage",
         "website": "",
-        "headshot": "/images/speakers/damncabbage.jpg",
+        "headshotPath": "images/speaker/damncabbage.jpg",
+        "headshot": "damncabbage",
         "type": "talk",
         "length": 30,
         "bio": ""
@@ -126,10 +139,10 @@
         "name": "Tanya Butenko",
         "twitter": "ButenkoMe",
         "website": "",
-        "headshot": "/images/speakers/butenkome.jpg",
+        "headshotPath": "images/speaker/butenkome.jpg",
+        "headshot": "butenkome",
         "type": "talk",
         "length": 30,
         "bio": ""
     }
-    
 ]

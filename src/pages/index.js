@@ -20,6 +20,9 @@ import {
   SpeakerHeadingText,
   ButtonText,
 } from 'component/text';
+import { graphql, useStaticQuery } from 'gatsby';
+
+import speakers from 'asset/data/speakers.json';
 
 const sTextShadow = css`
   text-shadow: 0 4px 2px hsla(0, 0%, 0%, 0.1);
@@ -189,118 +192,57 @@ const DiversitySection = props => (
   </Section>
 );
 
-const SpeakersSection = props => (
-  <Section isGrid bg="transparent" {...props}>
-    <Block w={[5, 4, 3, 3]} c={[1, 5, 6, 6]} mb={['700', null, '600']}>
-      <SpeakerHeadingText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-          `,
-          sTextShadow,
-        ]}
-      >
-        Speaker Name #1
-      </SpeakerHeadingText>
-      <BodyText
-        color="white"
-        css={css`
-          text-align: right;
-        `}
-      >
-        One liner about speaker
-      </BodyText>
-      <ButtonText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-            text-decoration: underline;
-          `,
-          sTextShadow,
-        ]}
-      >
-        More about name >
-      </ButtonText>
-    </Block>
-    <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]} mb={['700', '700', '600']}>
-      <SpeakerImage
-        src="https://i.pravatar.cc/300?1"
-        alt="Speaker #1"
-        width="300px"
-        height="300px"
-      />
-    </Block>
+const speakerHeadshots = () => (
+  useStaticQuery(
+    graphql`
+      query {
+        developersteve: file(relativePath: { eq: "speakers/developersteve.jpg" }) {
+          publicURL
+        }
+        calvindass: file(relativePath: { eq: "speakers/calvindass.jpg" }) {
+          publicURL
+        }
+        devxcong: file(relativePath: { eq: "speakers/devxcong.jpg" }) {
+          publicURL
+        }
+        devdevcharlie: file(relativePath: { eq: "speakers/devdevcharlie.jpg" }) {
+          publicURL
+        }
+        julian: file(relativePath: { eq: "speakers/julian.jpg" }) {
+          publicURL
+        }
+        ingapflaumer: file(relativePath: { eq: "speakers/ingapflaumer.jpg" }) {
+          publicURL
+        }
+        dalanmiller: file(relativePath: { eq: "speakers/dalanmiller.png" }) {
+          publicURL
+        }
+        bendechrai: file(relativePath: { eq: "speakers/bendechrai.png" }) {
+          publicURL
+        }
+        damncabbage: file(relativePath: { eq: "speakers/damncabbage.jpg" }) {
+          publicURL
+        }
+        butenkome: file(relativePath: { eq: "speakers/butenkome.jpg" }) {
+          publicURL
+        }
+      }
+    `
+  )
+);
 
-    <Block w={[6, 4, 4, 4]} c={[1, 1, 1, 1]} mb={['700', '700', '600']}>
-      <SpeakerImage
-        src="https://i.pravatar.cc/300?2"
-        alt="Speaker #2"
-        width="300px"
-        height="300px"
-      />
-    </Block>
-    <Block w={[5, 4, 3, 3]} c={[8, 5, 5, 5]} mb={['700', '700', '600']}>
-      <SpeakerHeadingText color="white">Speaker Name #2</SpeakerHeadingText>
-      <BodyText color="white">One liner about speaker</BodyText>
-      <ButtonText
-        color="white"
-        css={[
-          css`
-            text-decoration: underline;
-          `,
-          sTextShadow,
-        ]}
-      >
-        More about name >
-      </ButtonText>
-    </Block>
-
-    <Block w={[5, 4, 3, 3]} c={[1, 5, 6, 6]}>
-      <SpeakerHeadingText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-          `,
-          sTextShadow,
-        ]}
-      >
-        Speaker Name #3
-      </SpeakerHeadingText>
-      <BodyText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-          `,
-          sTextShadow,
-        ]}
-      >
-        One liner about speaker
-      </BodyText>
-      <ButtonText
-        color="white"
-        css={[
-          css`
-            text-align: right;
-            text-decoration: underline;
-          `,
-          sTextShadow,
-        ]}
-      >
-        More about name >
-      </ButtonText>
-    </Block>
-    <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]} mb={['600']}>
-      <SpeakerImage
-        src="https://i.pravatar.cc/300?3"
-        alt="Speaker #3"
-        width="300px"
-        height="300px"
-      />
-    </Block>
+const SpeakersSection = props => {
+  const myFace = speakerHeadshots();
+  return <Section isGrid bg="transparent" {...props}>
+    {
+      speakers.filter(speaker => !speaker.ignore).map((speaker, idx) => {
+        if (idx%2) {
+          return <SpeakerLeft key={idx} image={myFace[speaker.headshot].publicURL} {...speaker} />
+        } else {
+          return <SpeakerRight key={idx} image={myFace[speaker.headshot].publicURL} {...speaker} />
+        }
+      })
+    }
     <Block w={[12]} c={[1]} alignItems="flex-end">
       <ButtonText
         color="white"
@@ -312,56 +254,62 @@ const SpeakersSection = props => (
           sTextShadow,
         ]}
       >
-        View more speakers >
+        View the full <Anchor to="/schedule">schedule</Anchor> >
+
       </ButtonText>
     </Block>
   </Section>
-);
+};
 
-const SponsorsSection = () => (
-  <Section
-    isGrid
-    gridProps={{ rowGap: 'space.500', colGap: 'space.500' }}
-    bg="white"
-    className="no-sticky-footer"
-  >
-    <Block
-      w={[12, 8, 12]}
-      c={[1, 3, 1]}
-      css={theme =>
-        css`
-          margin-bottom: -${themeGet('space.500')({ theme })};
-        `
-      }
-    >
-      <HeadingText>Thanks, sponsors!</HeadingText>
+const SpeakerLeft = props => (
+  <>
+   <Block w={[6, 4, 4, 4]} c={[1, 1, 1, 1]} mb={['700', '700', '600']}>
+      <SpeakerImage
+        src={props.image}
+        alt={props.name}
+        width="300px"
+        height="300px"
+      />
     </Block>
+    <Block w={[5, 4, 3, 3]} c={[8, 5, 5, 5]} mb={['700', '700', '600']}>
+      <SpeakerHeadingText color="white">{props.name}</SpeakerHeadingText>
+      <BodyText color="white">{props.title}</BodyText>
+    </Block>
+  </>
+)
 
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-    <Block w={[6, 4, 3, 3]}>
-      <Box width="100%" style={{ height: '120px' }} bg="gray300"></Box>
-    </Block>
-  </Section>
+const SpeakerRight = props => (
+  <>
+  <Block w={[5, 4, 3, 3]} c={[1, 5, 6, 6]} mb={['700', null, '600']}>
+      <SpeakerHeadingText
+        color="white"
+        css={[
+          css`
+            text-align: right;
+          `,
+          sTextShadow,
+        ]}
+      >
+        {props.name}
+      </SpeakerHeadingText>
+      <BodyText
+        color="white"
+        css={css`
+          text-align: right;
+        `}
+      >
+        {props.title}
+      </BodyText>
+  </Block>
+  <Block w={[6, 4, 4, 4]} c={[7, 9, 9, 9]} mb={['700', '700', '600']}>
+    <SpeakerImage
+      src={props.image}
+      alt={props.name}
+      width="300px"
+      height="300px"
+    />
+  </Block>
+  </>
 );
 
 const IndexPage = () => {
@@ -410,7 +358,6 @@ const IndexPage = () => {
           `}
         />
       </Box>
-      <SponsorsSection />
       <Footer isAlt={false} />
     </Stylings>
   );
