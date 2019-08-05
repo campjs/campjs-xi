@@ -231,6 +231,12 @@ export const Header = ({ ...props }) => {
 
         <VerticalMenu bg={bg} isOpen={isMenuOpen}>
           <NavLink
+            to="/speakers"
+            title="Talks & Workshops as volunteered by Speakers"
+          >
+            <NavItemText>Talks & Workshops</NavItemText>
+          </NavLink>
+          <NavLink
             to="/call-for-papers"
             title="Call for Papers - Round one ends on the 22nd July"
           >
@@ -242,13 +248,7 @@ export const Header = ({ ...props }) => {
             </NavItemText>
           </NavLink>
           <NavLink to="/about" title="About CampJS">
-            <NavItemText>About</NavItemText>
-          </NavLink>
-          {/*<NavLink to="/speakers" title="Talks & Workshops as volunteered by Speakers">*/}
-          {/*  <NavItemText>Talks & Workshops</NavItemText>*/}
-          {/*</NavLink>*/}
-          <NavLink to="/schedule" title="Events Schedule">
-            <NavItemText>Schedule</NavItemText>
+            <NavItemText>About CampJS</NavItemText>
           </NavLink>
           <NavLink
             to="/about#volunteer"
@@ -256,21 +256,24 @@ export const Header = ({ ...props }) => {
           >
             <NavItemText>Get Involved</NavItemText>
           </NavLink>
-          {/*<NavLink to="/things" title="Misc Resources for CampJS">*/}
-          {/*  <NavItemText>Things to Click</NavItemText>*/}
-          {/*</NavLink>*/}
-          <NavLink
-            href="https://ti.to/campjs/campjs-x"
-            title="Purchase the ticket page for CampJS X"
-          >
-            <NavItemText>Buy Tickets</NavItemText>
-          </NavLink>
           <NavLink
             href="https://twitter.com/campjs"
             title="Visit the CampJS Twitter"
           >
             <NavItemText>Tweet Tweet</NavItemText>
           </NavLink>
+          <NavLink
+            href="https://ti.to/campjs/campjs-x"
+            title="Purchase the ticket page for CampJS X"
+          >
+            <NavItemText>Buy Tickets</NavItemText>
+          </NavLink>
+          <NavLink to="/schedule" title="Events Schedule">
+            <NavItemText>Schedule</NavItemText>
+          </NavLink>
+          {/*<NavLink to="/things" title="Misc Resources for CampJS">*/}
+          {/*  <NavItemText>Things to Click</NavItemText>*/}
+          {/*</NavLink>*/}
           <Flex
             flexDirection="row"
             alignItems="flex-start"
@@ -296,7 +299,6 @@ export const Header = ({ ...props }) => {
                   placeholder="CAMPJSFAN@EMAIL.COM"
                   title="Your email for the CampJS X mailing list"
                   flex={['1 0 100%', '0 0 auto']}
-                  mb={['400', null]}
                   required
                 />
                 {/* form bot protection */}

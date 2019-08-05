@@ -226,7 +226,9 @@ const SpeakersSection = props => {
             sTextShadow,
           ]}
         >
-          <Anchor to="/speakers">View all speakers ></Anchor>
+          <Anchor to="/speakers">
+            View all speakers (talks & workshops) >
+          </Anchor>
         </ButtonText>
       </Block>
     </Section>
