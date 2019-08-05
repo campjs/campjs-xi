@@ -16,7 +16,6 @@ const Background = () => (
     <svg
       viewBox="0 0 1303 1480"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
       style={{
         position: 'absolute',

@@ -33,15 +33,15 @@ for (let bpi in bps) {
   }
 }
 
-export const Grid = ({ children, rowGap, ...props }) => (
+export const Grid = ({ children, rowGap, colGap, ...props }) => (
   <div
     css={theme => css`
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-column-gap: ${themeGet('space.500')({ theme })};
+      grid-column-gap: ${themeGet(colGap || 'space.500')({ theme })};
       ${rowGap && `grid-row-gap: ${themeGet(rowGap)({ theme })}`};
       @media screen and (max-width: ${themeGet('breakpoints.0')({ theme })}) {
-        grid-column-gap: 0;
+        grid-column-gap: ${themeGet(colGap || 'space.100')({ theme })};
       }
     `}
     {...props}
@@ -50,26 +50,29 @@ export const Grid = ({ children, rowGap, ...props }) => (
   </div>
 );
 
-export const Block = ({ w = 1, c = 'auto', children, ...props }) => {
-  const styles = [];
-  [].concat(w).forEach((width, bp) => {
-    if (gx.w[bp] && gx.w[bp][width]) styles.push(gx.w[bp][width]);
-  });
-  [].concat(c).forEach((column, bp) => {
-    column = column == null ? 'auto' : column;
-    if (gx.w[bp] && gx.c[bp][column]) styles.push(gx.c[bp][column]);
-  });
-  return (
-    <Box css={css(styles)} {...props}>
-      {children}
-    </Box>
-  );
-};
+export const Block = React.forwardRef(
+  ({ w = 1, c = 'auto', children, ...props }, ref) => {
+    const styles = [];
+    [].concat(w).forEach((width, bp) => {
+      if (gx.w[bp] && gx.w[bp][width]) styles.push(gx.w[bp][width]);
+    });
+    [].concat(c).forEach((column, bp) => {
+      column = column == null ? 'auto' : column;
+      if (gx.w[bp] && gx.c[bp][column]) styles.push(gx.c[bp][column]);
+    });
+    return (
+      <Box ref={ref} css={css(styles)} {...props}>
+        {children}
+      </Box>
+    );
+  }
+);
 
 export const Section = ({
   children,
   isAlt,
   isGrid,
+  gridProps,
   renderPreblock,
   ...props
 }) => (
@@ -85,7 +88,7 @@ export const Section = ({
   >
     {renderPreblock && renderPreblock()}
     <Box mx="auto" style={{ width: '100%', maxWidth: '960px' }}>
-      {isGrid ? <Grid>{children}</Grid> : children}
+      {isGrid ? <Grid {...(gridProps || {})}>{children}</Grid> : children}
     </Box>
   </Box>
 );

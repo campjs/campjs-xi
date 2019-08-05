@@ -1,8 +1,9 @@
-import { jsx } from '@emotion/core';
-import { PrimaryButton, SecondaryButton } from 'component/button';
 import React from 'react';
+import { Stylings } from 'component/providers';
+import SEO from 'component/seo';
 import { Footer, Header } from 'component/navigation';
 import { Block, Section } from 'component/section';
+import { PrimaryButton, SecondaryButton } from 'component/button';
 import {
   BodyText,
   FeatureText,
@@ -11,8 +12,6 @@ import {
   OrderList,
   SubHeadingText,
 } from 'component/text';
-import { Stylings } from 'component/providers';
-import SEO from 'component/seo';
 
 const CallForPapersPage = () => {
   return (
@@ -50,7 +49,7 @@ const CallForPapersPage = () => {
       </Section>
 
       <Section isGrid bg="gray400">
-        <Block w={[12, 8, 5, 5]} c={[1, 3, 1, 1]}>
+        <Block id="talks" w={[12, 8, 5, 5]} c={[1, 3, 1, 1]}>
           <HeadingText color="orange100">Talks</HeadingText>
         </Block>
         <Block w={[12, 8, 4, 4]} c={[1, 3, 1, 1]}>
@@ -84,7 +83,7 @@ const CallForPapersPage = () => {
           </OrderList>
         </Block>
 
-        <Block mt="600" w={[12, 8, 5, 5]} c={[1, 3, 5, 5]}>
+        <Block id="activities" mt="600" w={[12, 8, 5, 5]} c={[1, 3, 5, 5]}>
           <HeadingText color="orange100">Activities</HeadingText>
         </Block>
         <Block w={[12, 8, 4, 4]} c={[1, 3, 5, 5]}>

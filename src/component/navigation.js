@@ -140,6 +140,7 @@ const NavRight = styled.div`
   top: ${themeGet('space.500')};
   right: ${themeGet('space.500')};
   max-width: calc(100vw - ${themeGet('space.500')});
+  z-index: 1;
 `;
 
 const VerticalMenu = styled.nav`
@@ -199,7 +200,8 @@ const Input = styled.input`
   letter-spacing: 1px;
   margin-right: ${themeGet('space.300')};
   &::placeholder {
-    color: ${themeGet('colors.gray200')};
+    color: ${themeGet('colors.black')};
+    opacity: 0.3;
   }
   ${flex}
   ${margin}
@@ -229,34 +231,30 @@ export const Header = ({ ...props }) => {
 
         <VerticalMenu bg={bg} isOpen={isMenuOpen}>
           <NavLink
+            to="/speakers"
+            title="Talks & Workshops as volunteered by Speakers"
+          >
+            <NavItemText>Talks & Workshops</NavItemText>
+          </NavLink>
+          <NavLink
             to="/call-for-papers"
             title="Call for Papers - Round one ends on the 22nd July"
           >
-            <NavItemText>Call for Papers 🕑</NavItemText>
+            <NavItemText>
+              Call for Papers{' '}
+              <span role="img" aria-label="Clock">
+                🕑
+              </span>
+            </NavItemText>
           </NavLink>
           <NavLink to="/about" title="About CampJS">
-            <NavItemText>About</NavItemText>
+            <NavItemText>About CampJS</NavItemText>
           </NavLink>
-          {/*<NavLink to="/speakers" title="Talks & Workshops as volunteered by Speakers">*/}
-          {/*  <NavItemText>Talks & Workshops</NavItemText>*/}
-          {/*</NavLink>*/}
-          {/*<NavLink to="/schedule" title="Events Schedule">*/}
-          {/*  <NavItemText>Schedule</NavItemText>*/}
-          {/*</NavLink>*/}
           <NavLink
             to="/about#volunteer"
             title="Volunteer to help out on the day!"
           >
             <NavItemText>Get Involved</NavItemText>
-          </NavLink>
-          {/*<NavLink to="/things" title="Misc Resources for CampJS">*/}
-          {/*  <NavItemText>Things to Click</NavItemText>*/}
-          {/*</NavLink>*/}
-          <NavLink
-            href="https://ti.to/campjs/campjs-x"
-            title="Visit the ticket page for CampJS X"
-          >
-            <NavItemText>Buy Tickets</NavItemText>
           </NavLink>
           <NavLink
             href="https://twitter.com/campjs"
@@ -264,6 +262,18 @@ export const Header = ({ ...props }) => {
           >
             <NavItemText>Tweet Tweet</NavItemText>
           </NavLink>
+          <NavLink
+            href="https://ti.to/campjs/campjs-x"
+            title="Purchase the ticket page for CampJS X"
+          >
+            <NavItemText>Buy Tickets</NavItemText>
+          </NavLink>
+          <NavLink to="/schedule" title="Events Schedule">
+            <NavItemText>Schedule</NavItemText>
+          </NavLink>
+          {/*<NavLink to="/things" title="Misc Resources for CampJS">*/}
+          {/*  <NavItemText>Things to Click</NavItemText>*/}
+          {/*</NavLink>*/}
           <Flex
             flexDirection="row"
             alignItems="flex-start"
@@ -289,7 +299,6 @@ export const Header = ({ ...props }) => {
                   placeholder="CAMPJSFAN@EMAIL.COM"
                   title="Your email for the CampJS X mailing list"
                   flex={['1 0 100%', '0 0 auto']}
-                  mb={['400', null]}
                   required
                 />
                 {/* form bot protection */}
@@ -307,7 +316,7 @@ export const Header = ({ ...props }) => {
                   />
                 </div>
                 <Button
-                  role="submit"
+                  role="button"
                   color="black"
                   fontSize="200"
                   fontWeight="400"
@@ -380,6 +389,9 @@ export const Footer = () => {
       pt="600"
       pb="700"
       bg="yellow100"
+      css={css`
+        position: relative;
+      `}
       renderPreblock={() => (
         <LogoTent
           css={theme => css`
@@ -456,7 +468,7 @@ export const Footer = () => {
       >
         <PrimaryButton
           width="100%"
-          title="Visit the ticket page for CampJS X"
+          title="Purchase the ticket page for CampJS X"
           href="https://ti.to/campjs/campjs-x"
         >
           Buy your ticket
