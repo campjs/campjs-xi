@@ -30,7 +30,9 @@ const styles = {
     bottom: 0;
     left: 50%;
     width: 0.4vw;
+    min-width: 5px;
     height: 0.4vw;
+    min-height: 5px;
     margin: -0.2vw 0 0 9.8vw;
     animation: ease 200s alternate infinite;
     pointer-events: none;
@@ -101,7 +103,6 @@ const Container = styled.div`
   left: 0;
   max-height: 75%;
   height: 110vh;
-  overflow: visible;
 `;
 
 export const FirefliesBG = () => {

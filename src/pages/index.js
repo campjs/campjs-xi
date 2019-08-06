@@ -236,6 +236,7 @@ const IndexPage = () => {
         css={css`
           position: relative;
           padding-bottom: 20vw;
+          overflow: hidden;
         `}
       >
         <MidBG />
