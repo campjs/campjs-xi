@@ -46,7 +46,7 @@ const styles = {
       transform-origin: -10vw;
     }
     &::before {
-      background: #36293b;
+      background: hsla(283, 18%, 20%, 0.23);
       opacity: 0.4;
       animation: ${keyframes.drift} ease alternate infinite;
     }
