@@ -101,7 +101,7 @@ const Container = styled.div`
   left: 0;
   max-height: 75%;
   height: 110vh;
-  overflow: hidden;
+  overflow: visible;
 `;
 
 export const FirefliesBG = () => {
