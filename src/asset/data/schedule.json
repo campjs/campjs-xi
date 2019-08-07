@@ -169,6 +169,13 @@
   },
   {
     "date": "1 Sept",
+    "time": "5pm",
+    "location": "Pier",
+    "title": "Smaller ferry leaves for Brooklyn Wharf",
+    "details": "This is a small ferry. The main ferry leaves tomorrow morning at 10am."
+  },
+  {
+    "date": "1 Sept",
     "time": "6pm",
     "location": "Dining Hall",
     "title": "Dinner",
@@ -180,5 +187,19 @@
     "location": "Dining Hall",
     "title": "Closing Remarks + Show & Tell",
     "details": ""
+  },
+  {
+    "date": "2 Sept",
+    "time": "8:30am",
+    "location": "Dining Hall",
+    "title": "Breakfast and Wind up",
+    "details": ""
+  },
+  {
+    "date": "2 Sept",
+    "time": "10am",
+    "location": "Pier",
+    "title": "Ferry leaves Broken Bay Centre for Brooklyn Wharf",
+    "details": "Ferry will depart sharp at 10am and reach the wharf by approximately 10:45am"
   }
 ]
