@@ -157,7 +157,7 @@
     },
     {
         "title": "Building Scalable (and maintainable) Microservices with JavaScript",
-        "description": "Microservices are essential in any buzzword-compliant stack, but what are they and how do they work (and not work) in practice? In this talk we look at some of the decisions and trade-offs in Microservices Architectures, and I'll give a quick demo of Zeebe, a workflow engine for microservices orchestration, using the JavaScript client.",
+        "description": "Microservices are essential in any buzzword-compliant stack, but what are they and how do they work (and not work) in practice? In this talk we look at some of the decisions and trade-offs in Microservices Architectures. I will also discuss how multiple microservices can work together and what role orchestration plays. I will show working source code in Node using the open source workflow engine Zeebe",
         "name": "Josh Wulf",
         "twitter": "sitapati",
         "website": "",
