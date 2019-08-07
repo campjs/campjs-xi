@@ -133,7 +133,14 @@ const AboutPage = () => {
           </BodyText>
           <BodyText tin="up">
             To get a vibe for the event, check out the videos from previous
-            camps.
+            camps or our {' '}
+              <a
+                className="anchor"
+                href="http://twitter.com/campjs"
+              >
+                Twitter page
+              </a>
+            .
           </BodyText>
         </Block>
       </Section>
@@ -169,15 +176,14 @@ const AboutPage = () => {
                   .
                 </BodyText>
                 <BodyText color="gray100">
-                  It is an hours drive north of Sydney, or a 2-stop{' '}
+                  It is an hours drive north of Sydney, or a short{' '}
                   <a
                     className="anchor"
                     href="https://www.google.com/maps/dir/Sydney+Airport+(SYD),+Sydney+NSW/-33.546003,151.2274676/@-33.7359813,151.0053596,11z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x6b12b0f11b3383db:0xafdf355d5a4b6577!2m2!1d151.1752764!2d-33.9399228!1m0"
                   >
                     train ride
                   </a>{' '}
-                  that stops at the Ferry that will take everyone over to the
-                  retreat.
+                  to Brooklyn Train Station. We will catch a chartered ferry from the wharf across from the train station that will take us to the retreat.
                 </BodyText>
               </Block>
             </Grid>
@@ -208,6 +214,34 @@ const AboutPage = () => {
           </Box>
         </Flex>
       </Box>
+
+      <Section id="transport" isGrid bg="orange400">
+        <Block w={[12, 8, 6, 4]} c={[1, 3, 3, 3]}>
+          <HeadingText color="gray100">
+            Getting there & back
+          </HeadingText>
+          <BodyText color="gray100">
+            There will be a chartered ferry that will take everyone to the retreat leaving <b>exactly at 6pm on Friday 30th August</b> from the wharf opposite Brooklyn train station. Despite what Google says you cannot drive to Broken Bay Sport and Rec Centre.
+          </BodyText>
+          <BodyText color="gray100">
+            There is only one ferry, so it's important that we reach Brooklyn train station on time and use the time to socialise or visit the local bottleshop to stock up on snacks or drinks before the camp. The parking at the train station is limited so we recommend you to catch a train.
+          </BodyText>
+          <BodyText color="gray100">
+            There will be two ferries bringing you back to Brooklyn Train Station. A small ferry will leave Sunday, 1st September at 5pm (to have you back by ~6pm), spots on this ferry are limited. A larger ferry will leave Broken Bay at 10am (Brooklyn by ~11am) on Monday 2nd September. Please book your flights and plan your trip accordingly.
+          </BodyText>
+          <BodyText color="gray100" mb="100">
+            We recommend you use NSW Transport endorsed website {' '}
+            <a
+              className="anchor"
+              href="https://transportnsw.info/"
+              title="Transport Info"
+            >
+              https://transportnsw.info/
+            </a>
+            {' '} to plan your trip well in advance.
+          </BodyText>
+        </Block>
+      </Section>
 
       <Section id="checklist" isGrid bg="yellow100">
         <Block w={[12, 8, 4, 4]} c={[1, 3, 3, 3]}>
