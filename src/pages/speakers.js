@@ -24,7 +24,7 @@ const SpeakersPage = () => {
     <Stylings>
       <SEO title="Schedule" />
       <Section isGrid isAlt renderPreblock={() => <Header />}>
-        <Block w={[12, 8, 8, 8]} c={[1, 3, 3, 3]}>
+        <Block w={[12, 8, 8, 8]} c={[1]}>
           <FeatureText mb="600" tin="up" color="pink200">
             Speakers
           </FeatureText>

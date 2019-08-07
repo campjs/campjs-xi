@@ -25,7 +25,7 @@ import { FirefliesBG } from 'component/backgrounds/fireflies';
 import speakers from 'asset/data/speakers.json';
 
 const sTextShadow = css`
-  text-shadow: 0 4px 2px hsla(0, 0%, 0%, 0.1);
+  text-shadow: 0 2px 1px hsla(264, 28%, 21%, 0.3);
 `;
 
 const HeaderSection = props => (
@@ -176,6 +176,7 @@ const SpeakersSection = props => {
               <SpeakerBlockLeft
                 key={idx}
                 image={speaker.headshot}
+                textStyle={sTextShadow}
                 {...speaker}
               />
             );
@@ -184,6 +185,7 @@ const SpeakersSection = props => {
               <SpeakerBlockRight
                 key={idx}
                 image={speaker.headshot}
+                textStyle={sTextShadow}
                 {...speaker}
               />
             );

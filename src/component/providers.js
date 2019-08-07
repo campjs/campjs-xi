@@ -49,6 +49,11 @@ export const SiteStyles = ({ children }) => (
         a.anchor {
           text-decoration: underline;
         }
+        .js-loading *,
+        .js-loading *:before,
+        .js-loading *:after {
+          animation-play-state: paused !important;
+        }
         /* body > div > div > section {
           position: relative;
           z-index: 1;

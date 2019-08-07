@@ -8,9 +8,7 @@ const speakerImageStyles = {};
 const getSpeakerImageStyle = width => {
   if (!(width in speakerImageStyles)) {
     speakerImageStyles[width] = css`
-      border-radius: 2px;
       max-width: ${width};
-      width: 100%;
     `;
   }
 
@@ -23,6 +21,7 @@ export const SpeakerImage = ({
   color = '#9da7c1',
   width,
   height,
+  extraContainerStyles = '',
   ...props
 }) => {
   const images = getAllFluidImages();
@@ -33,13 +32,16 @@ export const SpeakerImage = ({
   }
   return (
     <Box
-      {...props}
       css={[
         getSpeakerImageStyle(width),
         css`
-          height: 0;
-          padding-bottom: 100%;
           background-color: ${color};
+          height: 0;
+          width: 100%;
+          padding-bottom: calc(100% - 2px);
+          border-radius: 3px;
+          border: solid 1px transparent;
+          ${extraContainerStyles}
         `,
       ]}
     >
@@ -54,6 +56,8 @@ export const SpeakerImage = ({
             mix-blend-mode: soft-light;
             filter: grayscale(1);
             height: auto;
+            width: 100%;
+            border-radius: 3px;
           `,
         ]}
         {...props}

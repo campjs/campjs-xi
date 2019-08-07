@@ -24,7 +24,13 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-document.documentElement.className = document.documentElement.className.replace(/\\bno-js\\b/,'js');`,
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
+document.documentElement.classList.add('js-loading');
+window.addEventListener("load", function () {
+  document.documentElement.classList.remove('js-loading');
+});
+`,
           }}
         />
         {props.postBodyComponents}

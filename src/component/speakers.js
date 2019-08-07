@@ -16,6 +16,16 @@ import {
 import useTransitionIn from 'util/use-transition-in';
 
 const defaultTextStyle = css``;
+const imageOnBlueStyle = css`
+  box-shadow: 0px 11px 3px -8px hsla(267, 27%, 21%, 0.3),
+    0px 45px 40px -30px hsla(267, 27%, 21%, 0.1);
+  border: solid 1px #4e586f;
+`;
+const imageOnPurpleStyle = css`
+  box-shadow: 0px 9px 3px -8px hsla(267, 27%, 21%, 0.3),
+    0px 35px 40px -20px hsla(267, 27%, 21%, 0.1);
+  border: solid 1px #ada9c6;
+`;
 
 export const SpeakerBlockLeft = ({
   image,
@@ -34,7 +44,13 @@ export const SpeakerBlockLeft = ({
         c={[1, 1, 1, 1]}
         mb={['700', '700', '600']}
       >
-        <SpeakerImage image={image} alt={name} width="300px" height="300px" />
+        <SpeakerImage
+          image={image}
+          alt={name}
+          width="300px"
+          height="300px"
+          extraContainerStyles={imageOnBlueStyle}
+        />
       </Block>
       <Block
         css={rTransCss}
@@ -99,7 +115,13 @@ export const SpeakerBlockRight = ({
         c={[7, 9, 9, 9]}
         mb={['700', '700', '600']}
       >
-        <SpeakerImage image={image} alt={name} width="300px" height="300px" />
+        <SpeakerImage
+          image={image}
+          alt={name}
+          width="300px"
+          height="300px"
+          extraContainerStyles={imageOnBlueStyle}
+        />
       </Block>
     </>
   );
@@ -167,6 +189,7 @@ export const SpeakerTalksBlockLeft = ({
           color={'#bfbcce'}
           width="300px"
           height="300px"
+          extraContainerStyles={imageOnPurpleStyle}
         />
         <SpeakerHeadingText
           color={textColor}
@@ -274,6 +297,7 @@ export const SpeakerTalksBlockRight = ({
           color={'#bfbcce'}
           width="300px"
           height="300px"
+          extraContainerStyles={imageOnPurpleStyle}
         />
         <SpeakerHeadingText
           color={textColor}
