@@ -116,21 +116,6 @@ const SpeakersPage = () => {
         </Grid>
       </Section>
 
-      <Section isGrid bg="orange400">
-        <Block w={[12, 12, 6]} c={[1, 1, 4]}>
-          <HeadingText color="yellow100">More Talks & Workshops</HeadingText>
-          <BodyText color="yellow100">
-            We've finished our first round of submissions, and we'll soon start
-            our second, so expect more talks and workshops soon!
-          </BodyText>
-          <BodyText color="yellow100">
-            Take a look at our{' '}
-            <Anchor to="/call-for-papers">Call For Speakers</Anchor> for more
-            information.
-          </BodyText>
-        </Block>
-      </Section>
-
       <Footer />
     </Stylings>
   );

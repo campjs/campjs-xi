@@ -166,5 +166,17 @@
         "length": 30,
         "bio": "",
         "featured": false
+    },
+    {
+        "title": "Let me change how you hack in JavaScript",
+        "description": "We are currently seeing an explosion in the desire to build creative coding, data science, machine learning, hacking type projects. But while javascript is great, the tooling for these types of programs is left to be desired.\nIn this talk, I'm going to dive into the problems with modern js tools, and how we've spent the last twelve months working on a brand new type of coding environment to solve them.",
+        "name": "Matt Way",
+        "twitter": "_MattWay",
+        "website": "",
+        "headshot": "mattway.jpg",
+        "type": "talk",
+        "length": 30,
+        "bio": "",
+        "featured": false
     }
 ]
