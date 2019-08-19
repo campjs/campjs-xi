@@ -52,26 +52,9 @@ const CallForPapersPage = () => {
             papers
           </FeatureText>
           <BodyText tin="up">
-            The first round of submissions has finished, and{' '}
+            The CFP has closed and{' '}
             <Anchor to="/speakers">speakers</Anchor> have been chosen.
           </BodyText>
-          <BodyText tin="up">
-            The{' '}
-            <strong>
-              second round of talk and workshop submissions will be open soon
-            </strong>
-            . Keep up to date by{' '}
-            <Anchor
-              href="https://twitter.com/campjs"
-              title="Follow the CampJS Twitter"
-            >
-              following us on Twitter
-            </Anchor>{' '}
-            or subscribing to our mailing list from the site's menu.
-          </BodyText>
-          {/*<BodyText tin="up">*/}
-          {/*  Access Slack chat on WeAllJS using /join-private #campjs*/}
-          {/*</BodyText>*/}
         </Block>
 
         {/*<HeaderButtonBlock />*/}
