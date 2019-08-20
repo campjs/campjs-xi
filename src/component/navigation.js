@@ -370,12 +370,35 @@ const FooterNavBlock = ({ children, ...props }) => (
 );
 
 export const Footer = () => {
-  const { sponsorKitPdf } = useStaticQuery(
+  const {
+    sponsorKitPdf,
+    sponsorImgArkoslabs,
+    sponsorImgLookahead,
+    sponsorImgStripe,
+  } = useStaticQuery(
     graphql`
       query {
         sponsorKitPdf: file(
           relativePath: { eq: "campjs-x-sponsorkit.pdf" }
           sourceInstanceName: { eq: "downloads" }
+        ) {
+          publicURL
+        }
+
+        sponsorImgLookahead: file(
+          relativePath: { eq: "sponsor-logos/lookahead.png" }
+        ) {
+          publicURL
+        }
+
+        sponsorImgStripe: file(
+          relativePath: { eq: "sponsor-logos/stripe.png" }
+        ) {
+          publicURL
+        }
+
+        sponsorImgArkoslabs: file(
+          relativePath: { eq: "sponsor-logos/arkoslabs.png" }
         ) {
           publicURL
         }
@@ -491,6 +514,65 @@ export const Footer = () => {
               Scroll to top ^
             </NavItemText>
           </NavLink>
+        </Flex>
+      </Block>
+
+      <Block w={12} c={1} mt="600" order="10">
+        <Flex
+          justifyContent="space-evenly"
+          alignItems="center"
+          width="100%"
+          flexWrap="wrap"
+          css={theme => css`
+            margin: -${themeGet('space.500')({ theme })} -${themeGet(
+                'space.400'
+              )({ theme })};
+            & > * {
+              padding: ${themeGet('space.500')({ theme })};
+              transition: transform ease 350ms;
+            }
+            & > *:hover,
+            & > *:focus {
+              transform: translateY(-4px);
+            }
+          `}
+        >
+          <a
+            title="Visit our sponsor, Arkos Labs"
+            href="https://www.arkoselabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Sponsor Logo: Arkos Labs"
+              src={sponsorImgArkoslabs.publicURL}
+              width="220px"
+            />
+          </a>
+          <a
+            title="Visit our sponsor, Lookahead"
+            href="https://www.lookahead.com.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Sponsor Logo: Lookahead"
+              src={sponsorImgLookahead.publicURL}
+              width="220px"
+            />
+          </a>
+          <a
+            title="Visit our sponsor, Stripe"
+            href="https://stripe.com/au"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Sponsor Logo: Stripe"
+              src={sponsorImgStripe.publicURL}
+              width="125px"
+            />
+          </a>
         </Flex>
       </Block>
     </Section>
