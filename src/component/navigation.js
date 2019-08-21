@@ -374,6 +374,7 @@ export const Footer = () => {
     sponsorKitPdf,
     sponsorImgArkoslabs,
     sponsorImgLookahead,
+    sponsorImgPlaygroundXYZ,
     sponsorImgStripe,
   } = useStaticQuery(
     graphql`
@@ -385,20 +386,26 @@ export const Footer = () => {
           publicURL
         }
 
+        sponsorImgArkoslabs: file(
+          relativePath: { eq: "sponsor-logos/arkoslabs.png" }
+        ) {
+          publicURL
+        }
+
         sponsorImgLookahead: file(
           relativePath: { eq: "sponsor-logos/lookahead.png" }
         ) {
           publicURL
         }
 
-        sponsorImgStripe: file(
-          relativePath: { eq: "sponsor-logos/stripe.png" }
+        sponsorImgPlaygroundXYZ: file(
+          relativePath: { eq: "sponsor-logos/playgroundxyz.svg" }
         ) {
           publicURL
         }
 
-        sponsorImgArkoslabs: file(
-          relativePath: { eq: "sponsor-logos/arkoslabs.png" }
+        sponsorImgStripe: file(
+          relativePath: { eq: "sponsor-logos/stripe.png" }
         ) {
           publicURL
         }
@@ -546,7 +553,7 @@ export const Footer = () => {
             <img
               alt="Sponsor Logo: Arkos Labs"
               src={sponsorImgArkoslabs.publicURL}
-              width="220px"
+              width="170px"
             />
           </a>
           <a
@@ -558,7 +565,19 @@ export const Footer = () => {
             <img
               alt="Sponsor Logo: Lookahead"
               src={sponsorImgLookahead.publicURL}
-              width="220px"
+              width="170px"
+            />
+          </a>
+          <a
+            title="Visit our sponsor, PLAYGROUND XYZ"
+            href="https://playground.xyz/our-story/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Sponsor Logo: PLAYGROUND XYZ"
+              src={sponsorImgPlaygroundXYZ.publicURL}
+              width="170px"
             />
           </a>
           <a
@@ -570,7 +589,7 @@ export const Footer = () => {
             <img
               alt="Sponsor Logo: Stripe"
               src={sponsorImgStripe.publicURL}
-              width="125px"
+              width="105px"
             />
           </a>
         </Flex>
