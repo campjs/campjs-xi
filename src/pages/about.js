@@ -176,14 +176,28 @@ const AboutPage = () => {
                   .
                 </BodyText>
                 <BodyText color="gray100">
-                  It is an hours drive north of Sydney, or a short{' '}
+                  It is an hours{' '}
                   <a
                     className="anchor"
-                    href="https://www.google.com/maps/dir/Sydney+Airport+(SYD),+Sydney+NSW/-33.546003,151.2274676/@-33.7359813,151.0053596,11z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x6b12b0f11b3383db:0xafdf355d5a4b6577!2m2!1d151.1752764!2d-33.9399228!1m0"
+                    title="Directions - Google Maps"
+                    href="https://www.google.com/maps/dir/Sydney+Airport+(SYD),+Sydney+NSW/-33.546003,151.2274676/@-33.7340049,151.0065848,11z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x6b12b0f11b3383db:0xafdf355d5a4b6577!2m2!1d151.1752764!2d-33.9399228!1m0!2m3!6e1!7e2!8j1567184100"
+                  >
+                    drive
+                  </a>{' '}
+                  north of Sydney, or a {' '}
+                  <a
+                    className="anchor"
+                    title="Tickets - Transport NSW"
+                    href="https://transportnsw.info/trip#/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=arr&opalOnly=false&from=10101331&to=10101133&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201908301655"
                   >
                     train ride
                   </a>{' '}
                   to Brooklyn Train Station. We will catch a chartered ferry from the wharf across from the train station that will take us to the retreat.
+                </BodyText>
+                <BodyText color="gray100">
+                  <Anchor to="/schedule">
+                    View full schedule >
+                  </Anchor>
                 </BodyText>
               </Block>
             </Grid>
