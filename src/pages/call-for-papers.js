@@ -52,8 +52,8 @@ const CallForPapersPage = () => {
             papers
           </FeatureText>
           <BodyText tin="up">
-            The CFP has closed and{' '}
-            <Anchor to="/speakers">speakers</Anchor> have been chosen.
+            The CFP has closed and <Anchor to="/speakers">speakers</Anchor> have
+            been chosen.
           </BodyText>
         </Block>
 

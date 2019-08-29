@@ -177,19 +177,36 @@ export const ScheduleRowTitle = ({ children, ...props }) => (
   </Text>
 );
 
-export const ScheduleRowDesc = ({ children, ...props }) => (
-  <Text
-    as="p"
-    color="gray200"
-    fontSize="300"
-    fontWeight="400"
-    fontFamily="sans"
-    textDecoration="none"
-    {...props}
-  >
-    {children}
-  </Text>
-);
+const processMDAnchors = str => {
+  const matches = /\[([^\[\]]+)\]\(([^)]+)\)/.exec(str);
+  return matches ? (
+    <>
+      {str.split(matches[0])[0]}
+      <Anchor href={matches[2]}>{matches[1]}</Anchor>
+      {str.split(matches[0])[1]}
+    </>
+  ) : (
+    str
+  );
+};
+
+export const ScheduleRowDesc = ({ children, ...props }) => {
+  const content =
+    typeof children === 'string' ? processMDAnchors(children) : children;
+  return (
+    <Text
+      as="p"
+      color="gray200"
+      fontSize="300"
+      fontWeight="400"
+      fontFamily="sans"
+      textDecoration="none"
+      {...props}
+    >
+      {content}
+    </Text>
+  );
+};
 
 export const NavItemText = ({ children, ...props }) => (
   <Text

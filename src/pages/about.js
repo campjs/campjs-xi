@@ -133,13 +133,10 @@ const AboutPage = () => {
           </BodyText>
           <BodyText tin="up">
             To get a vibe for the event, check out the videos from previous
-            camps or our {' '}
-              <a
-                className="anchor"
-                href="http://twitter.com/campjs"
-              >
-                Twitter page
-              </a>
+            camps or our{' '}
+            <a className="anchor" href="http://twitter.com/campjs">
+              Twitter page
+            </a>
             .
           </BodyText>
         </Block>
@@ -184,7 +181,7 @@ const AboutPage = () => {
                   >
                     drive
                   </a>{' '}
-                  north of Sydney, or a {' '}
+                  north of Sydney, or a{' '}
                   <a
                     className="anchor"
                     title="Tickets - Transport NSW"
@@ -192,12 +189,12 @@ const AboutPage = () => {
                   >
                     train ride
                   </a>{' '}
-                  to Brooklyn Train Station. We will catch a chartered ferry from the wharf across from the train station that will take us to the retreat.
+                  to Brooklyn Train Station. We will catch a chartered ferry
+                  from the wharf across from the train station that will take us
+                  to the retreat.
                 </BodyText>
                 <BodyText color="gray100">
-                  <Anchor to="/schedule">
-                    View full schedule >
-                  </Anchor>
+                  <Anchor to="/schedule">View full schedule ></Anchor>
                 </BodyText>
               </Block>
             </Grid>
@@ -231,28 +228,38 @@ const AboutPage = () => {
 
       <Section id="transport" isGrid bg="orange400">
         <Block w={[12, 8, 6, 4]} c={[1, 3, 3, 3]}>
-          <HeadingText color="gray100">
-            Getting there & back
-          </HeadingText>
+          <HeadingText color="gray100">Getting there & back</HeadingText>
           <BodyText color="gray100">
-            There will be a chartered ferry that will take everyone to the retreat leaving <b>exactly at 6pm on Friday 30th August</b> from the wharf opposite Brooklyn train station. Despite what Google says you cannot drive to Broken Bay Sport and Rec Centre.
+            There will be a chartered ferry that will take everyone to the
+            retreat leaving <b>exactly at 6pm on Friday 30th August</b> from the
+            wharf opposite Brooklyn train station. Despite what Google says you
+            cannot drive to Broken Bay Sport and Rec Centre.
           </BodyText>
           <BodyText color="gray100">
-            There is only one ferry, so it's important that we reach Brooklyn train station on time and use the time to socialise or visit the local bottleshop to stock up on snacks or drinks before the camp. The parking at the train station is limited so we recommend you to catch a train.
+            There is only one ferry, so it's important that we reach Brooklyn
+            train station on time and use the time to socialise or visit the
+            local bottleshop to stock up on snacks or drinks before the camp.
+            The parking at the train station is limited so we recommend you to
+            catch a train.
           </BodyText>
           <BodyText color="gray100">
-            There will be two ferries bringing you back to Brooklyn Train Station. A small ferry will leave Sunday, 1st September at 5pm (to have you back by ~6pm), spots on this ferry are limited. A larger ferry will leave Broken Bay at 10am (Brooklyn by ~11am) on Monday 2nd September. Please book your flights and plan your trip accordingly.
+            There will be two ferries bringing you back to Brooklyn Train
+            Station. A small ferry will leave Sunday, 1st September at 5pm (to
+            have you back by ~6pm), spots on this ferry are limited. A larger
+            ferry will leave Broken Bay at 10am (Brooklyn by ~11am) on Monday
+            2nd September. Please book your flights and plan your trip
+            accordingly.
           </BodyText>
           <BodyText color="gray100" mb="100">
-            We recommend you use NSW Transport endorsed website {' '}
+            We recommend you use NSW Transport endorsed website{' '}
             <a
               className="anchor"
               href="https://transportnsw.info/"
               title="Transport Info"
             >
               https://transportnsw.info/
-            </a>
-            {' '} to plan your trip well in advance.
+            </a>{' '}
+            to plan your trip well in advance.
           </BodyText>
         </Block>
       </Section>

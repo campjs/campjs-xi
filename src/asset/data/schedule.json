@@ -4,7 +4,7 @@
     "time": "5pm",
     "location": "Brooklyn Station, NSW",
     "title": "Meet at Brooklyn Train Station",
-    "details": "Head to local Bottle shop and get some supplies."
+    "details": "Head to [local Bottle shop](https://goo.gl/maps/VzwoyXifZdjPSdUE6) and get some supplies."
   },
   {
     "date": "30 Aug",
@@ -172,7 +172,7 @@
     "time": "5pm",
     "location": "Pier",
     "title": "Smaller ferry leaves for Brooklyn Wharf",
-    "details": "This is a small ferry. The main ferry leaves tomorrow morning at 10am."
+    "details": "This is a small ferry. The main ferry leaves tomorrow morning at 10am. [Train departs to Sydney soon after.](https:\\/\\/transportnsw.info\\/trip#\\/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=dep&opalOnly=false&from=10101133&to=10101331&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201909011100)"
   },
   {
     "date": "1 Sept",
@@ -200,6 +200,6 @@
     "time": "10am",
     "location": "Pier",
     "title": "Ferry leaves Broken Bay Centre for Brooklyn Wharf",
-    "details": "Ferry will depart sharp at 10am and reach the wharf by approximately 10:45am"
+    "details": "Ferry will depart sharp at 10am and reach the wharf by approximately 10:45am. [Train departs to Sydney soon after.](https:\\/\\/transportnsw.info\\/trip#\\/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=dep&opalOnly=false&from=10101133&to=10101331&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201909021100)"
   }
 ]
