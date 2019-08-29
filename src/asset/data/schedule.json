@@ -143,8 +143,15 @@
     "date": "1 Sept",
     "time": "1pm",
     "location": "Main Hall",
-    "title": "Workshop - Demystifying and accepting payments online",
-    "details": "by Daniel Miller"
+    "title": "Let me change how you hack in JavaScript",
+    "details": "by Matt Way"
+  },
+  {
+    "date": "1 Sept",
+    "time": "2pm",
+    "location": "Main Hall",
+    "title": "Building Scalable (and maintainable) Microservices with JavaScript",
+    "details": "by Josh Wulf"
   },
   {
     "date": "1 Sept",
