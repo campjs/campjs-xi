@@ -45,7 +45,7 @@
     "date": "31 Aug",
     "time": "11am",
     "location": "",
-    "title": "Afternoon Tea",
+    "title": "Morning Tea",
     "details": ""
   },
   {
@@ -68,6 +68,13 @@
     "location": "Main Hall",
     "title": "Workshop - Synth and Sequencing for beginners",
     "details": "by Julian Scharf"
+  },
+  {
+    "date": "31 Aug",
+    "time": "2.30pm",
+    "location": "Main Hall",
+    "title": "Web Sharing is Web Caring",
+    "details": "by Phil Nash"
   },
   {
     "date": "31 Aug",
