@@ -262,12 +262,6 @@ export const Header = ({ ...props }) => {
           >
             <NavItemText>Tweet Tweet</NavItemText>
           </NavLink>
-          <NavLink
-            href="https://ti.to/campjs/campjs-x"
-            title="Purchase the ticket page for CampJS X"
-          >
-            <NavItemText>Buy Tickets</NavItemText>
-          </NavLink>
           <NavLink to="/schedule" title="Events Schedule">
             <NavItemText>Schedule</NavItemText>
           </NavLink>

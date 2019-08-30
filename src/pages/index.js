@@ -73,9 +73,9 @@ const HeaderSection = props => (
         px="575"
         tin="up"
         title="Purchase the ticket page for CampJS X"
-        href="https://ti.to/campjs/campjs-x"
+        href="#"
       >
-        Buy tickets
+        Sold out!
       </SecondaryButton>
     </Block>
   </Section>
