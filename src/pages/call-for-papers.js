@@ -20,8 +20,8 @@ const HeaderButtonBlock = () => (
     <PrimaryButton
       tin="up"
       width="100%"
-      title="Google Form: CampJS X Call For Papers"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
+      title="Google Form: CampJS XI Call For Papers"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdN9TNty2Vtsq6aqclsyXeuPv13gM4VBeXaVmLA6KUsu63D1A/viewform"
     >
       Submit a talk or workshop
     </PrimaryButton>
@@ -32,8 +32,8 @@ const MiddleSectionButtonBlock = () => (
   <Block mt={[500, 500, 100, 100]} w={[8, 6, 4, 4]} c={[3, 4, 9, 9]}>
     <SecondaryButton
       width="100%"
-      title="Google Form: CampJS X Call For Papers"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdN9TNty2Vtsq6aqclsyXeuPv13gM4VBeXaVmLA6KUsu63D1A/viewform?usp=sf_link"
+      title="Google Form: CampJS XI Call For Papers"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdN9TNty2Vtsq6aqclsyXeuPv13gM4VBeXaVmLA6KUsu63D1A/viewform"
     >
       Submit a talk or workshop
     </SecondaryButton>
@@ -52,12 +52,12 @@ const CallForPapersPage = () => {
             papers
           </FeatureText>
           <BodyText tin="up">
-            The CFP has closed and <Anchor to="/speakers">speakers</Anchor> have
-            been chosen.
+            Submissions for the first CFP close on midnight of July 22nd! (you
+            can still run an activity)
           </BodyText>
         </Block>
 
-        {/*<HeaderButtonBlock />*/}
+        <HeaderButtonBlock />
       </Section>
 
       <Section isGrid bg="gray400">
@@ -152,7 +152,7 @@ const CallForPapersPage = () => {
           </BodyText>
         </Block>
 
-        {/*<MiddleSectionButtonBlock />*/}
+        <MiddleSectionButtonBlock />
       </Section>
 
       <Section isGrid bg="tan100">
