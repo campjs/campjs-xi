@@ -161,40 +161,31 @@ const AboutPage = () => {
           >
             <Grid>
               <Block w={[12, 8, 12, 12]} c={[1, 3, 1, 1]}>
-                <HeadingText color="orange100">Broken Bay</HeadingText>
+                <HeadingText color="orange100">Lord Somers Camp</HeadingText>
                 <BodyText color="gray100">
                   We lodge at{' '}
                   <a
                     className="anchor"
-                    href="https://sport.nsw.gov.au/facilities/brokenbay/tour"
+                    href="http://www.lordsomerscamp.com/"
                   >
-                    Broken Bay Sports & Rec Centre
-                  </a>
-                  .
+                    Lord Somers Camp
+                  </a> which is located approximately a one hour drive from Melbourne, on the southern side of the Mornington Peninsula in Victoria.
                 </BodyText>
                 <BodyText color="gray100">
-                  It is an hours{' '}
+                  We are perfectly located overlooking the beach and nestled in the local wilderness of Somers.
+                </BodyText>
+                <BodyText color="gray100">
+                  Surrounding our campsite the local area hosts fantastic wildlife parks, natural and indigenous vegetation, hot springs, local wineries, and heaps more.
+                </BodyText>
+                <BodyText color="gray100">
+                  Come and discover our fantastic campsite, visit us at the{' '}
                   <a
                     className="anchor"
                     title="Directions - Google Maps"
-                    href="https://www.google.com/maps/dir/Sydney+Airport+(SYD),+Sydney+NSW/-33.546003,151.2274676/@-33.7340049,151.0065848,11z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x6b12b0f11b3383db:0xafdf355d5a4b6577!2m2!1d151.1752764!2d-33.9399228!1m0!2m3!6e1!7e2!8j1567184100"
+                    href="https://goo.gl/maps/QAKq6"
                   >
-                    drive
-                  </a>{' '}
-                  north of Sydney, or a{' '}
-                  <a
-                    className="anchor"
-                    title="Tickets - Transport NSW"
-                    href="https://transportnsw.info/trip#/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=arr&opalOnly=false&from=10101331&to=10101133&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201908301655"
-                  >
-                    train ride
-                  </a>{' '}
-                  to Brooklyn Train Station. We will catch a chartered ferry
-                  from the wharf across from the train station that will take us
-                  to the retreat.
-                </BodyText>
-                <BodyText color="gray100">
-                  <Anchor to="/schedule">View full schedule ></Anchor>
+                    corner of Lord Somers Road & Parklands Avenue, Somers, Victoria, 3297
+                  </a>{' '}.
                 </BodyText>
               </Block>
             </Grid>
@@ -226,7 +217,7 @@ const AboutPage = () => {
         </Flex>
       </Box>
 
-      <Section id="transport" isGrid bg="orange400">
+      {/* <Section id="transport" isGrid bg="orange400">
         <Block w={[12, 8, 6, 4]} c={[1, 3, 3, 3]}>
           <HeadingText color="gray100">Getting there & back</HeadingText>
           <BodyText color="gray100">
@@ -262,7 +253,7 @@ const AboutPage = () => {
             to plan your trip well in advance.
           </BodyText>
         </Block>
-      </Section>
+      </Section> */}
 
       <Section id="checklist" isGrid bg="yellow100">
         <Block w={[12, 8, 4, 4]} c={[1, 3, 3, 3]}>
@@ -348,7 +339,7 @@ const AboutPage = () => {
             others on the{' '}
             <a
               className="anchor"
-              href="https://github.com/campjs/campjs-x/issues"
+              href="https://github.com/campjs/campjs-xi/issues"
             >
               Github issue tracker
             </a>{' '}
@@ -358,8 +349,8 @@ const AboutPage = () => {
             Diversity tickets can be bought on the{' '}
             <a
               className="anchor"
-              href="https://ti.to/campjs/campjs-x"
-              title="Visit the CampJS X ticket page to purchase Diversity Tickets"
+              href="https://ti.to/campjs/campjs-xi"
+              title="Visit the CampJS XI ticket page to purchase Diversity Tickets"
             >
               Tickets page
             </a>
@@ -400,7 +391,7 @@ const AboutPage = () => {
               We organise as much of CampJS in the open as possible on{' '}
               <a
                 className="anchor"
-                href="https://github.com/campjs/campjs-x/issues"
+                href="https://github.com/campjs/campjs-xi/issues"
               >
                 Github issues
               </a>
@@ -410,7 +401,7 @@ const AboutPage = () => {
               If you have a question or would like to suggest an improvement for
               the meetup,{' '}
               <Anchor
-                href="https://github.com/campjs/campjs-x/issues"
+                href="https://github.com/campjs/campjs-xi/issues"
                 title="Suggest an improvement"
               >
                 open a new issue

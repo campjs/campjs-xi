@@ -230,12 +230,12 @@ export const Header = ({ ...props }) => {
         </BurgerButton>
 
         <VerticalMenu bg={bg} isOpen={isMenuOpen}>
-          <NavLink
+          {/* <NavLink
             to="/speakers"
             title="Talks & Workshops as volunteered by Speakers"
           >
             <NavItemText>Talks & Workshops</NavItemText>
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/call-for-papers"
             title="Call for Papers - Round one ends on the 22nd July"
@@ -433,12 +433,12 @@ export const Footer = () => {
         w={[12, 6, 3, 3]}
         c={[1, 1, 1, 1]}
       >
-        <NavLink
+        {/* <NavLink
           to="/speakers"
           title="Talks & Workshops as volunteered by Speakers"
         >
           <NavItemText>Talks & Workshops</NavItemText>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/schedule" title="Events Schedule">
           <NavItemText>Schedule</NavItemText>
         </NavLink>
@@ -493,7 +493,7 @@ export const Footer = () => {
         <PrimaryButton
           width="100%"
           title="Purchase the ticket page for CampJS X"
-          href="https://ti.to/campjs/campjs-x"
+          href="https://ti.to/campjs/campjs-xi"
         >
           Buy your ticket
         </PrimaryButton>
@@ -538,7 +538,7 @@ export const Footer = () => {
             }
           `}
         >
-          <a
+          {/* <a
             title="Visit our sponsor, Arkos Labs"
             href="https://www.arkoselabs.com"
             target="_blank"
@@ -585,7 +585,7 @@ export const Footer = () => {
               src={sponsorImgStripe.publicURL}
               width="105px"
             />
-          </a>
+          </a> */}
         </Flex>
       </Block>
     </Section>

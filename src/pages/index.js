@@ -53,7 +53,7 @@ const HeaderSection = props => (
             text-transform: uppercase;
           `}
         >
-          Broken Bay, NSW
+          Mornington Peninsula, VIC
         </SubHeadingText>
         <SubHeadingText
           tin="up"
@@ -62,7 +62,7 @@ const HeaderSection = props => (
             text-transform: uppercase;
           `}
         >
-          30 Aug - 2 Sep
+          21st - 24th Aug 2020
         </SubHeadingText>
       </Flex>
     </Block>
@@ -73,9 +73,9 @@ const HeaderSection = props => (
         px="575"
         tin="up"
         title="Purchase the ticket page for CampJS X"
-        href="#"
+        href="https://ti.to/campjs/campjs-xi"
       >
-        Sold out!
+        Buy tickets
       </SecondaryButton>
     </Block>
   </Section>
@@ -156,7 +156,7 @@ const DiversitySection = props => (
         We’re committed to creating an inclusive and welcoming event for people
         from all walks of life. Read more about{' '}
         <Anchor to="/about#diversity">our initatives</Anchor> and purchase a{' '}
-        <Anchor href="https://github.com/campjs/campjs-x/issues">
+        <Anchor href="https://github.com/campjs/campjs-xi/issues">
           diversity ticket
         </Anchor>{' '}
         if you qualify.

@@ -33,7 +33,7 @@ const MiddleSectionButtonBlock = () => (
     <SecondaryButton
       width="100%"
       title="Google Form: CampJS X Call For Papers"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSed626uXBFYK9paH6vkZSh6GyDmAVauxgWcBDIYKkf24hD_wA/viewform"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdN9TNty2Vtsq6aqclsyXeuPv13gM4VBeXaVmLA6KUsu63D1A/viewform?usp=sf_link"
     >
       Submit a talk or workshop
     </SecondaryButton>

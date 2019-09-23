@@ -1,219 +1,210 @@
 [
   {
-    "date": "30 Aug",
-    "time": "5pm",
-    "location": "Brooklyn Station, NSW",
-    "title": "Meet at Brooklyn Train Station",
-    "details": "Head to [local Bottle shop](https://goo.gl/maps/VzwoyXifZdjPSdUE6) and get some supplies."
+    "date": "14 Aug",
+    "time": "3:00pm",
+    "location": "Center Lawn",
+    "title": "First Bus Arrives"
   },
   {
-    "date": "30 Aug",
-    "time": "6pm",
-    "location": "Wharf next to Brooklyn Station, NSW",
-    "title": "Ferry Departs at 6pm sharp",
-    "details": "Make sure you catch this. There is no backup ferry."
+    "date": "14 Aug",
+    "time": "4:00pm",
+    "location": "Center Lawn",
+    "title": "Second Bus Arrives"
   },
   {
-    "date": "30 Aug",
-    "time": "7pm",
-    "location": "Dining Hall",
-    "title": "Dinner",
-    "details": ""
+    "date": "14 Aug",
+    "time": "5:00pm",
+    "location": "Center Lawn",
+    "title": "Ice Breaker Session",
+    "speaker": "Volunteer wanted"
   },
   {
-    "date": "31 Aug",
-    "time": "9am",
-    "location": "Dining Hall",
-    "title": "Breakfast",
-    "details": ""
+    "date": "14 Aug",
+    "time": "6:00pm",
+    "location": "Main Hall",
+    "title": "Dinner"
   },
   {
-    "date": "31 Aug",
+    "date": "14 Aug",
+    "time": "7:00pm",
+    "location": "Center Lawn",
+    "title": "Third Bus Arrives"
+  },
+  {
+    "date": "14 Aug",
+    "time": "7:15pm",
+    "location": "Main Hall",
+    "title": "Welcome and Announcements",
+    "speaker": "The Organisers"
+  },
+  {
+    "date": "14 Aug",
+    "time": "Late",
+    "location": "Outdoor Amphitheatre",
+    "details": "Evening program (Music etc.)"
+  },
+  {
+    "date": "14 Aug",
+    "time": "Late",
+    "location": "Tower Block Common Room",
+    "details": "Games etc."
+  },
+  {
+    "date": "15 Aug",
+    "time": "9:00am",
+    "location": "Main Hall",
+    "title": "Breakfast"
+  },
+  {
+    "date": "15 Aug",
+    "time": "10:00am - 11:00am",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "15 Aug",
+    "time": "11:00am",
+    "location": "Main Hall",
+    "title": "Morning Break"
+  },
+  {
+    "date": "15 Aug",
+    "time": "11:15am - 12:00am",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "15 Aug",
+    "time": "12:00pm",
+    "location": "Main Hall",
+    "title": "Lunch"
+  },
+  {
+    "date": "15 Aug",
+    "time": "1:15pm",
+    "location": "Center Lawn",
+    "title": "Group Photo"
+  },
+  {
+    "date": "15 Aug",
+    "time": "1:30pm - 3:00pm",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "15 Aug",
+    "time": "3:00pm",
+    "location": "Main Hall",
+    "title": "Afternoon Break"
+  },
+  {
+    "date": "15 Aug",
+    "time": "3:30pm - 6:00pm",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "15 Aug",
+    "time": "6:00pm",
+    "location": "Main Hall",
+    "title": "Dinner"
+  },
+  {
+    "date": "15 Aug",
+    "time": "Late",
+    "location": "Outdoor Amphitheatre",
+    "title": "Evening Program"
+  },
+  {
+    "date": "15 Aug",
+    "time": "Late",
+    "location": "Tower Block Common Room",
+    "title": "Games etc"
+  },
+  {
+    "date": "16 Aug",
+    "time": "9:00am",
+    "location": "Main Hall",
+    "title": "Breakfast"
+  },
+  {
+    "date": "16 Aug",
+    "time": "10:00am - 11:00am",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "16 Aug",
+    "time": "11:00am",
+    "location": "Main Hall",
+    "title": "Morning Break"
+  },
+  {
+    "date": "16 Aug",
+    "time": "11:15am - 12:00am",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "16 Aug",
+    "time": "12:00pm",
+    "location": "Main Hall",
+    "title": "Lunch"
+  },
+  {
+    "date": "16 Aug",
+    "time": "1:00pm - 3:00pm",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "16 Aug",
+    "time": "3:00pm",
+    "location": "Main Hall",
+    "title": "Afternoon Break"
+  },
+  {
+    "date": "16 Aug",
+    "time": "3:15pm - 6:00pm",
+    "location": "Outdoor Amphitheatre",
+    "title": "Talks",
+    "speaker": ""
+  },
+  {
+    "date": "16 Aug",
+    "time": "6:00pm",
+    "location": "Main Hall",
+    "title": "Dinner"
+  },
+  {
+    "date": "16 Aug",
+    "time": "7:00 pm",
+    "location": "Main Hall",
+    "title": "Lightning Talks and Demos"
+  },
+  {
+    "date": "16 Aug",
+    "time": "Late",
+    "location": "Main Hall",
+    "title": "Closing Remarks"
+  },
+  {
+    "date": "17 Aug",
+    "time": "8.30am",
+    "location": "Main Hall",
+    "title": "Breakfast"
+  },
+  {
+    "date": "17 Aug",
     "time": "10am",
-    "location": "Main Hall",
-    "title": "Strike a pose - Gesture recognition in JavaScript with Machine Learning & Arduino",
-    "details": "by Charlie Gerard"
-  },
-  {
-    "date": "31 Aug",
-    "time": "10:30am",
-    "location": "Main Hall",
-    "title": "Automating the $h1T out of everything because I am very very tired",
-    "details": "by Calvin Dass"
-  },
-  {
-    "date": "31 Aug",
-    "time": "11am",
-    "location": "",
-    "title": "Morning Tea",
-    "details": ""
-  },
-  {
-    "date": "31 Aug",
-    "time": "11:30am",
-    "location": "Main Hall",
-    "title": "Javascripting your way to electronicless passive wifi devices",
-    "details": "by Steven Cooper"
-  },
-  {
-    "date": "31 Aug",
-    "time": "12noon",
-    "location": "Dining Hall",
-    "title": "Lunch",
-    "details": ""
-  },
-  {
-    "date": "31 Aug",
-    "time": "1pm",
-    "location": "Main Hall",
-    "title": "Workshop - Synth and Sequencing for beginners",
-    "details": "by Julian Scharf"
-  },
-  {
-    "date": "31 Aug",
-    "time": "2.30pm",
-    "location": "Main Hall",
-    "title": "Web Sharing is Web Caring",
-    "details": "by Phil Nash"
-  },
-  {
-    "date": "31 Aug",
-    "time": "3pm",
-    "location": "Dining Hall",
-    "title": "Afternoon Tea",
-    "details": ""
-  },
-  {
-    "date": "31 Aug",
-    "time": "3:30pm",
-    "location": "Main Hall",
-    "title": "Fewer Bugs with Better TypeScript Types",
-    "details": "by Rob Howard"
-  },
-  {
-    "date": "31 Aug",
-    "time": "4pm",
-    "location": "Main Hall",
-    "title": "Workshop - React Patterns And Refactoring",
-    "details": "by Inga Pflaumer"
-  },
-  {
-    "date": "31 Aug",
-    "time": "6pm",
-    "location": "Dining Hall",
-    "title": "Dinner",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "9am",
-    "location": "Dining Hall",
-    "title": "Breakfast",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "10am",
-    "location": "Main Hall",
-    "title": "Tech communities",
-    "details": "by Tanya Butenko"
-  },
-  {
-    "date": "1 Sept",
-    "time": "10:30am",
-    "location": "Main Hall",
-    "title": "Refactoring React With Juniors",
-    "details": "by Inga Pflaumer"
-  },
-  {
-    "date": "1 Sept",
-    "time": "11am",
-    "location": "",
-    "title": "Break",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "11:30am",
-    "location": "Main Hall",
-    "title": "The nerurodiversity factor in tech",
-    "details": "by Julian Scharf"
-  },
-  {
-    "date": "1 Sept",
-    "time": "12noon",
-    "location": "Dining Hall",
-    "title": "Lunch",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "1pm",
-    "location": "Main Hall",
-    "title": "Let me change how you hack in JavaScript",
-    "details": "by Matt Way"
-  },
-  {
-    "date": "1 Sept",
-    "time": "2pm",
-    "location": "Main Hall",
-    "title": "Building Scalable (and maintainable) Microservices with JavaScript",
-    "details": "by Josh Wulf"
-  },
-  {
-    "date": "1 Sept",
-    "time": "3pm",
-    "location": "Dining Hall",
-    "title": "Afternoon Tea",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "3:30pm",
-    "location": "Main Hall",
-    "title": "Making gaming more efficient and fun",
-    "details": "by Cong Nguyen"
-  },
-  {
-    "date": "1 Sept",
-    "time": "4pm",
-    "location": "Main Hall",
-    "title": "Opening Doors with JSON Web Tokens",
-    "details": "by Ben Dechrai"
-  },
-  {
-    "date": "1 Sept",
-    "time": "5pm",
-    "location": "Pier",
-    "title": "Smaller ferry leaves for Brooklyn Wharf",
-    "details": "This is a small ferry. The main ferry leaves tomorrow morning at 10am. [Train departs to Sydney soon after.](https:\\/\\/transportnsw.info\\/trip#\\/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=dep&opalOnly=false&from=10101133&to=10101331&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201909011100)"
-  },
-  {
-    "date": "1 Sept",
-    "time": "6pm",
-    "location": "Dining Hall",
-    "title": "Dinner",
-    "details": ""
-  },
-  {
-    "date": "1 Sept",
-    "time": "7pm",
-    "location": "Dining Hall",
-    "title": "Closing Remarks + Show & Tell",
-    "details": ""
-  },
-  {
-    "date": "2 Sept",
-    "time": "8:30am",
-    "location": "Dining Hall",
-    "title": "Breakfast and Wind up",
-    "details": ""
-  },
-  {
-    "date": "2 Sept",
-    "time": "10am",
-    "location": "Pier",
-    "title": "Ferry leaves Broken Bay Centre for Brooklyn Wharf",
-    "details": "Ferry will depart sharp at 10am and reach the wharf by approximately 10:45am. [Train departs to Sydney soon after.](https:\\/\\/transportnsw.info\\/trip#\\/?wSpeed=4&wDuration=20&itFromMode=walk&itToMode=walk&routeFilter=time&metro&train&bus&ferry&lightRail&coach&schoolBus=false&accessible=false&arrDep=dep&opalOnly=false&from=10101133&to=10101331&selectedWalkDuration=20&selectedCycleDuration=20&selectedDriveDuration=20&dateTime=201909021100)"
+    "location": "Bus leaves",
+    "title": "Center Lawn"
   }
 ]

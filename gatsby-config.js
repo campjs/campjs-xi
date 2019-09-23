@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: 'CampJS X',
     description:
-      'CampJS is a 3-night code retreat in Broken Bay NSW Australia.',
+      'CampJS is a 3-night code retreat in Lord Somers Camp, Victoria, Australia.',
     author: '@campjs',
     siteUrl,
   },
@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'CampJS X',
-        short_name: 'CampJSX',
+        name: 'CampJS XI',
+        short_name: 'CampJS XI',
         start_url: '/',
         background_color: '#EC685A',
         theme_color: '#EC685A',

@@ -129,7 +129,7 @@ storiesOf('Layout', module)
     <>
       <Section isGrid isAlt renderPreblock={() => <Header />}>
         <Block w={12}>
-          <FeatureText>Welcome to Camp JSx</FeatureText>
+          <FeatureText>Welcome to Camp JS XI</FeatureText>
           <SubHeadingText>
             I'm a Section with a <Code>renderPrefix={'<Navigation />'}</Code>
           </SubHeadingText>

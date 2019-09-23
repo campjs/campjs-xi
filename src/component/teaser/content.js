@@ -61,7 +61,7 @@ const Info = ({ tin, ...props }) => {
         color="white"
         fontSize="400"
       >
-        30 Aug - 2 Sep
+        21-24 Aug
       </Text>
 
       <Text
@@ -71,13 +71,13 @@ const Info = ({ tin, ...props }) => {
         color="white"
         fontSize="400"
       >
-        Broken Bay, NSW
+        Mornington Peninsula, VIC
       </Text>
 
       <Button
         as="a"
         title="Purchase the ticket page for CampJS X"
-        href="https://ti.to/campjs/campjs-x"
+        href="https://ti.to/campjs/campjs-xi"
         variant="primary"
         color="white"
         bg="transparent"
