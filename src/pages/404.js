@@ -1,38 +1,49 @@
-/* @jsx jsx */
-import React from 'react';
-import { jsx, css } from '@emotion/core';
-import { Flex } from '@rebass/emotion';
-import Background from 'component/teaser/background';
+import * as React from "react"
+import { Link } from "gatsby"
 
-import SatelliteLayout from 'layout/satellite';
-import SEO from 'component/seo';
+const pageStyles = {
+  color: "#232129",
+  padding: "96px",
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+}
+const headingStyles = {
+  marginTop: 0,
+  marginBottom: 64,
+  maxWidth: 320,
+}
 
-const NotFoundPage = () => (
-  <SatelliteLayout>
-    <SEO title="404: Not found" />
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      css={css`
-        position: relative;
-        min-height: 100vh;
-        overflow: hidden;
-        color: white;
-      `}
-    >
-      <Background />
-      <Flex
-        flexDirection={'column'}
-        css={css`
-          position: relative;
-        `}
-      >
-        <h1>404: NOT FOUND</h1>
-        <sub>Meep morp.</sub>
-        <p>You just hit a route that doesn&#39;t exist, sorry camper!</p>
-      </Flex>
-    </Flex>
-  </SatelliteLayout>
-);
+const paragraphStyles = {
+  marginBottom: 48,
+}
+const codeStyles = {
+  color: "#8A6534",
+  padding: 4,
+  backgroundColor: "#FFF4DB",
+  fontSize: "1.25rem",
+  borderRadius: 4,
+}
 
-export default NotFoundPage;
+const NotFoundPage = () => {
+  return (
+    <main style={pageStyles}>
+      <h1 style={headingStyles}>Page not found</h1>
+      <p style={paragraphStyles}>
+        Sorry 😔, we couldn’t find what you were looking for.
+        <br />
+        {process.env.NODE_ENV === "development" ? (
+          <>
+            <br />
+            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            <br />
+          </>
+        ) : null}
+        <br />
+        <Link to="/">Go home</Link>.
+      </p>
+    </main>
+  )
+}
+
+export default NotFoundPage
+
+export const Head = () => <title>Not found</title>
