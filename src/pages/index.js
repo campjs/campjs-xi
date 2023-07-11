@@ -1,14 +1,8 @@
 import * as React from "react"
+import Layout from "../components/layout"
+import Heading from "../components/heading"
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-}
+
 const headingAccentStyles = {
   color: "#663399",
 }
@@ -23,14 +17,14 @@ const codeStyles = {
   borderRadius: 4,
 }
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        🏕 CampJS
+    <Layout location={location}>
+      <Heading>
+        🏕 CampJS XI
         <br />
         <span style={headingAccentStyles}>3 night javascript code retreat</span>
-      </h1>
+      </Heading>
       <p style={paragraphStyles}>
         <code style={codeStyles}>Fri 3rd - Mon 6th November 2023</code>
       </p>
@@ -40,11 +34,10 @@ const IndexPage = () => {
       <p style={paragraphStyles}>
         <a href="https://ti.to/campjs/campjs-xi" rel="noopener noreferrer" target="_blank">Early bird tickets</a> available now.
       </p>
-      <img src={'tent.svg'} alt="CampJS Tent Logo" />
-    </main>
+      <img src={'/tent.svg'} alt="CampJS Tent Logo" />
+    </Layout>
   )
 }
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>

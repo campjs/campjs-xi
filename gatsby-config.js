@@ -3,10 +3,34 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `campjs-xi`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `CampJS XI`,
+    description: `CampJS is a 3 night code retreat held in the Gold Coast hinterland, Australia.`,
+    keywords: 'CampJS, javascript, conference, australia',
+    siteUrl: `https://xi.campjs.com`,
+    menuLinks: [
+      {
+        name: `Home`,
+        url: `/`,
+      },
+      {
+        name: `About`,
+        url: `/about`,
+      },
+      // {
+      //   name: `Tickets`,
+      //   url: `/tickets`,
+      // },
+      // {
+      //   name: `Schedule`,
+      //   url: `/schedule`,
+      // },
+      // {
+      //   name: `Call for papers`,
+      //   url: `/call-for-papers`,
+      // },
+    ],
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", {
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-react-helmet", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
