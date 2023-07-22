@@ -2,10 +2,6 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Heading from "../components/heading"
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-}
 const paragraphStyles = {
   marginBottom: 48,
 }
@@ -26,7 +22,6 @@ const Page = ({ location }) => {
       <p style={paragraphStyles}>
         To get a vibe for the event, check out the videos from previous camps or our Twitter page.
       </p>
-      <img src={'/tent.svg'} alt="CampJS Tent Logo" />
     </Layout>
   )
 }

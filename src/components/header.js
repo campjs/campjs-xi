@@ -17,24 +17,6 @@ const Header = ({ siteTitle, menuLinks }) => (
         marginRight: "1.45rem",
       }}
     >
-      <Link
-        to="/"
-        style={{
-          margin: 10,
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: "auto",
-          fontFamily: "monospace",
-          fontWeight: 600,
-          fontSize: "3rem",
-          color: "black",
-          textDecoration: "none",
-        }}
-      >
-        CAMPJS<br />
-        XI
-      </Link>
       <nav
         style={{
           position: "fixed",
@@ -54,18 +36,7 @@ const Header = ({ siteTitle, menuLinks }) => (
               }}
             >
               <Link 
-                style={{ 
-                  color: "black",
-                  // textDecoration: 'none',
-                  // only underline if on hover or active
-                  // '&:focus, &:hover, &:visited, &:link, &:active': {
-                  //   textDecoration: 'underline',
-                  // },
-                  // '&:hover': {
-                  //   textDecoration: 'underline',
-                  //   background: "#efefef"
-                  // },
-                }} 
+                className="nav-link"
                 to={link.url}
               >
                 {link.name}
