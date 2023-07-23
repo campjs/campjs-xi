@@ -82,8 +82,9 @@ export default function Layout({ location, children }) {
       </div>
       <div style={pageStyles}>
         {children}
+        <img src={'/tent.svg'} style={{maxWidth:'80%'}} alt="CampJS Tent Logo" />
       </div>
-      <img src={'/tent.svg'} style={{maxWidth:'80%'}} alt="CampJS Tent Logo" />
+      
       
     </React.Fragment>
   );

@@ -59,7 +59,7 @@ body {
   &.right {
     transform:scaleX(-1);
     left:65%;
-    top:60%;
+    top:40%;
     .inner:after{
       background:#f7df1e;
     }
@@ -473,4 +473,21 @@ body {
     height:60px;
     left:calc(50% - 100px);
   }
+}
+
+
+@media screen and (min-height: 900px) {
+  .interactive-frame {
+    height: 500px;
+    /* You can add any other styles for "interactive-frame" in this media query as well */
+  }
+  .tent{
+    &.right {
+      top:55%;
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+
 }
