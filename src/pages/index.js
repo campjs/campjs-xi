@@ -27,6 +27,9 @@ const IndexPage = ({ location }) => {
       <Heading>
         <code style={codeStyles}><a href="https://ti.to/campjs/campjs-xi" rel="noopener noreferrer" target="_blank">Early bird tickets</a> available now.</code>
       </Heading>
+      <Heading>
+        <code style={codeStyles}><a href="https://cfp.campjs.org/campjs-xi/cfp" rel="noopener noreferrer" target="_blank">Call for Proposals</a> now open.</code>
+      </Heading>
     </Layout>
   )
 }
