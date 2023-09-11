@@ -1,0 +1,23 @@
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+.left-tree {
+  top: calc(43% - 50px);
+  left: 7%;
+}
+.right-tree {
+  top: calc(46% - 50px);
+  left: 15%;
+}
+
+#intro {
+  font-size: 3rem;
+  padding: 30px 80px;
+}
+#intro h1 {
+  margin-bottom: 0;
+}
