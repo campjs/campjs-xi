@@ -13,6 +13,10 @@ module.exports = {
         url: `/`,
       },
       {
+        name: `Code of Conduct`,
+        url: `/code-of-conduct`,
+      },
+      {
         name: `About`,
         url: `/about`,
       },
