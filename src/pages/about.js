@@ -19,9 +19,11 @@ const Page = ({ location }) => {
       <p style={paragraphStyles}>
         We schedule a unique blend of expert-led content and self-directed learning and encourage attendees to run other activities like bushwalking, drone flying or knitting.
       </p>
-      <p style={paragraphStyles}>
-        To get a vibe for the event, check out the videos from previous camps or our Twitter page.
-      </p>
+      <iframe width="840" height="472" src="https://www.youtube.com/embed/G1ObNPCYkOg?si=avJOp8qrWfwlURG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br />
+      <br />
+      <br />
+      <br />
     </Layout>
   )
 }
