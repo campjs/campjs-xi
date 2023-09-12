@@ -1,15 +1,6 @@
 import * as React from "react";
 import Slide from "../components/slide";
-import Heading from "../components/heading";
-const pageStyles = {
-  color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  margin: "12rem auto 0",
-  maxWidth: 960,
-  padding: "0px 1.0875rem 1.45rem",
-  zIndex: 5,
-  fontSize: "2rem",
-};
+
 const paragraphStyles = {
   fontFamily: "monospace",
   letterSpacing: "0.1em",

@@ -30,6 +30,9 @@ const IndexPage = ({ location }) => {
       <Heading>
         <code style={codeStyles}><a href="https://cfp.campjs.org/campjs-xi/cfp" rel="noopener noreferrer" target="_blank">Call for Proposals</a> now open.</code>
       </Heading>
+      <Heading>
+        <code style={codeStyles}><a href="https://campjs.org/slack" rel="noopener noreferrer" target="_blank">Join our slack</a> to stay up to date & connect with our loving community.</code>
+      </Heading>
     </Layout>
   )
 }
