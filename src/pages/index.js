@@ -25,10 +25,7 @@ const IndexPage = ({ location }) => {
         The schedule is yet to be published however if you'd like to get an idea on what talks and workshops are usually run, check out the <a href="https://x.campjs.org/schedule" rel="noopener noreferrer" target="_blank">schedule from CampJS X</a>.
       </p>
       <Heading>
-        <code style={codeStyles}><a href="https://ti.to/campjs/campjs-xi" rel="noopener noreferrer" target="_blank">Early bird tickets</a> available now.</code>
-      </Heading>
-      <Heading>
-        <code style={codeStyles}><a href="https://cfp.campjs.org/campjs-xi/cfp" rel="noopener noreferrer" target="_blank">Call for Proposals</a> now open.</code>
+        <code style={codeStyles}><a href="https://ti.to/campjs/campjs-xi" rel="noopener noreferrer" target="_blank">Tickets</a> available now.</code>
       </Heading>
       <Heading>
         <code style={codeStyles}><a href="https://campjs.org/slack" rel="noopener noreferrer" target="_blank">Join our slack</a> to stay up to date & connect with our loving community.</code>
