@@ -68,12 +68,12 @@ const Page = ({ location }) => {
         <br />
         <strong style={{ fontSize: "4rem" }}>www.campjs.org</strong>
       </p>
-
+{/* 
       <p style={cfpStyles}>
         submit a talk at
         <br />
         <strong style={{ fontSize: "4rem" }}>cfp.campjs.org</strong>
-      </p>
+      </p> */}
 
 
       <p style={blurbStyles}>
