@@ -13,6 +13,10 @@ module.exports = {
         url: `/`,
       },
       {
+        name: 'Schedule',
+        url: 'https://cfp.campjs.org/campjs-xi/schedule/',
+      },
+      {
         name: `Code of Conduct`,
         url: `/code-of-conduct`,
       },
