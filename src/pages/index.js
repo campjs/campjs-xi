@@ -34,6 +34,12 @@ const IndexPage = ({ location }) => {
       <Heading>
         <code style={codeStyles}><a href="https://campjs.org/slack" rel="noopener noreferrer" target="_blank">Join our slack</a> to stay up to date & connect with our loving community.</code>
       </Heading>
+      <iframe width="840" height="472" src="https://www.youtube.com/embed/G1ObNPCYkOg?si=avJOp8qrWfwlURG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </Layout>
   )
 }
