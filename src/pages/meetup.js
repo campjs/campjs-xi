@@ -40,33 +40,45 @@ const blurbStyles = {
   ...paragraphStyles,
   position: "absolute",
 
-  top: "21rem",
-  left: 'calc(23% + 100px)',
+  top: "37%",
+  left: 'calc(23% + 65px)',
   right: '120px',
   zIndex: 20,
   fontSize: "2rem",
   textShadow: undefined,
 };
 
+const blurbStyles2 = {
+  ...paragraphStyles,
+  position: "absolute",
+
+  top: "22%",
+  left: '6%',
+  right: '120px',
+  zIndex: 20,
+  fontSize: "2rem",
+  textShadow: undefined,
+};
+
+
 const Page = ({ location }) => {
   return (
     <Slide location={location}>
       <div id="intro">
-        <h1>🏕 CampJS</h1>
-        <div className="date">Fri 3rd - Mon 6th November 2023</div>
-        <div className="location">Koonjewarre, Springbrook, QLD</div>
+        <h1>Camp.JS</h1>
+        <div>3 night javascript code retreat</div>
       </div>
 
       <p style={slackStyles}>
-        stay up to date
-        <br />
-        <strong style={{ fontSize: "4rem" }}>campjs.org/slack</strong>
+        <strong style={{ fontSize: "4rem" }}>campjs.org</strong>
       </p>
 
       <p style={websiteStyles}>
-        tickets available at
-        <br />
-        <strong style={{ fontSize: "4rem" }}>www.campjs.org</strong>
+        $370 BYO tent
+        <br/>
+        $430 dorm room
+        <br/>
+        $340 child ticket
       </p>
 {/* 
       <p style={cfpStyles}>
@@ -81,6 +93,11 @@ const Page = ({ location }) => {
         new things, relax and really connect. Whether you’re a Javascript
         veteran, total newbie, into art, music or hardware, there’s something
         for everyone.
+      </p>
+      <p style={blurbStyles2}>
+        Fri 6pm to Mon 8am <br/>
+        3rd - 6th Nov 2023<br/>
+        Koonjewarre, Springbrook, QLD
       </p>
 
       {/* <div style={pageStyles}>
