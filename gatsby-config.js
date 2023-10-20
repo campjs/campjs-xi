@@ -18,15 +18,15 @@ module.exports = {
       },
       {
         name: `Code of Conduct`,
-        url: `/code-of-conduct`,
+        url: `/code-of-conduct/`,
       },
       {
         name: `COVID-19`,
-        url: `/covid-19`,
+        url: `/covid-19/`,
       },
       {
         name: `About`,
-        url: `/about`,
+        url: `/about/`,
       },
       // {
       //   name: `Tickets`,
