@@ -12,13 +12,6 @@ const codeStyles = {
   borderRadius: 4,
 }
 
-const youtubeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  borderRadius: 4,
-}
-  
-
 const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
@@ -30,15 +23,20 @@ const IndexPage = ({ location }) => {
         The 2023 camp was held at Koonjewarre (in Springbrook), on the Gold Coast Hinterland. The official camp schedule includes talks and workshops, but 
         attendees also run other activities like bushwalking, drone flying, and even knitting.
       </p>
+  
       <Heading>
-        <code style={codeStyles}><a href="https://campjs.org/slack" rel="noopener noreferrer" target="_blank">Join our slack</a> to be the first to know
-          about the next camp (Sydney, some time in April 2024) to stay up to date & connect with our loving community.</code>
+        <code style={codeStyles}>
+          <a href="https://campjs.org/slack" rel="noopener noreferrer" target="_blank">
+          Join our slack</a> to be the first to know about the next camp (Sydney, some time in April 2024) and to stay up to
+          date &amp; connect with our loving community.
+        </code>
       </Heading>
             
-      <Heading>
-        <code style={youtubeStyles}><a href="https://youtube.com/@CampJS" rel="noopener noreferrer" target="_blank">Subscribe to our YouTube channel</a> and you'll
-            get to see the talks as they are released over the next few months.</code>
-      </Heading>
+      
+      <p style={paragraphStyles}>
+        <a href="https://youtube.com/@CampJS" rel="noopener noreferrer" target="_blank">Subscribe to our YouTube channel</a> and you'll
+        get to see the talks as they are released over the next few months.</code>
+      </p>
           
       {/*
       <Heading>
