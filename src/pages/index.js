@@ -12,6 +12,13 @@ const codeStyles = {
   borderRadius: 4,
 }
 
+const youtubeStyles = {
+  color: "#8A6534",
+  padding: 4,
+  borderRadius: 4,
+}
+  
+
 const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
@@ -29,7 +36,7 @@ const IndexPage = ({ location }) => {
       </Heading>
             
       <Heading>
-        <code style={codeStyles}><a href="https://youtube.com/@CampJS" rel="noopener noreferrer" target="_blank">Subscribe to our YouTube channel</a> and you'll
+        <code style={youtubeStyles}><a href="https://youtube.com/@CampJS" rel="noopener noreferrer" target="_blank">Subscribe to our YouTube channel</a> and you'll
             get to see the talks as they are released over the next few months.</code>
       </Heading>
           
