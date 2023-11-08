@@ -35,7 +35,7 @@ const IndexPage = ({ location }) => {
       
       <p style={paragraphStyles}>
         <a href="https://youtube.com/@CampJS" rel="noopener noreferrer" target="_blank">Subscribe to our YouTube channel</a> and you'll
-        get to see the talks as they are released over the next few months.</code>
+        get to see the talks as they are released over the next few months.
       </p>
           
       {/*
